@@ -150,11 +150,48 @@
   .hero-right{position:relative;aspect-ratio:1;min-height:420px}
   .hero-canvas-wrap{position:absolute;inset:-4% -4% -4% -4%}
   .hero-canvas-wrap canvas{width:100%!important;height:100%!important;display:block}
+  /* desktop only: pull the visualisation up so it sits above the hero text mid-line */
+  @media(min-width:981px){
+    .hero-right{transform:translateY(-46px)}
+  }
   @media(max-width:980px){
     .hero-right{min-height:340px;max-width:520px;margin:0 auto;width:100%}
   }
   @media(max-width:640px){
     .hero-right{min-height:300px}
+  }
+
+  /* ---------- 3D scene labels (project chain/products onto nodes) ---------- */
+  .hero-3d-labels{position:absolute;inset:0;pointer-events:none;z-index:2;overflow:visible}
+  .hero-lbl{
+    position:absolute;top:0;left:0;
+    font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--ink);background:rgba(243,236,221,.92);border:1px solid var(--line);
+    border-radius:999px;padding:4px 9px;white-space:nowrap;pointer-events:none;
+    will-change:transform,opacity;backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);
+    box-shadow:0 2px 8px -3px rgba(22,19,16,.18);
+    transition:none;
+  }
+  .hero-lbl-node{}
+  .hero-lbl-sat{background:rgba(226,106,74,.96);color:var(--cream);border-color:rgba(140,58,33,.4)}
+  .hero-lbl-center{
+    font-family:'Instrument Serif',serif;font-style:italic;text-transform:none;
+    font-size:14px;letter-spacing:.005em;
+    background:rgba(22,19,16,.92);color:var(--cream);border-color:transparent;
+    padding:5px 12px;
+    /* the center label is static; pin to canvas centre */
+    left:50%;top:50%;transform:translate(-50%,-50%)!important;
+  }
+  /* tiny tick mark linking the bubble to its node */
+  .hero-lbl::before{
+    content:"";position:absolute;left:-8px;top:50%;width:8px;height:1px;background:var(--ink);opacity:.35;
+  }
+  .hero-lbl-sat::before{background:var(--cream);opacity:.5}
+  .hero-lbl-center::before{display:none}
+  /* hide projected labels on phones; the center wordmark stays */
+  @media(max-width:640px){
+    .hero-lbl-node,.hero-lbl-sat{display:none}
+    .hero-lbl-center{font-size:12px;padding:4px 10px}
   }
   .hero-labels{position:absolute;inset:0;pointer-events:none}
   .hero-labels span{position:absolute;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
@@ -1245,9 +1282,13 @@ gsap.utils.toArray('.section-head h2, .section-head .eyebrow, .section-head .met
   root.add(sphereLines);
 
   /* -- Floating node points distributed by Fibonacci spiral -- */
-  const NODE_COUNT = 26;
+  /* 24 nodes → i % 6 === 0 gives exactly 4 active (USDC / ETH / SOL / ₹·UPI),
+     mapping to the chains & rails Praneeth actually works across. */
+  const NODE_COUNT = 24;
+  const ACTIVE_LABELS = ['USDC', 'ETH', 'SOL', '₹·UPI'];
   const nodePositions = [];
   const nodeMeshes = [];
+  let activeIdx = 0;
   for (let i = 0; i < NODE_COUNT; i++){
     const phi = Math.acos(1 - 2 * (i + 0.5) / NODE_COUNT);
     const theta = Math.PI * (1 + Math.sqrt(5)) * (i + 0.5);
@@ -1259,10 +1300,9 @@ gsap.utils.toArray('.section-head h2, .section-head .eyebrow, .section-head .met
     );
     nodePositions.push(p);
 
-    // every ~6th node is an "active" coral node (pulses)
-    const active = i % 6 === 0;
+    const active = i % 6 === 0 && activeIdx < ACTIVE_LABELS.length;
     const node = new THREE.Mesh(
-      new THREE.SphereGeometry(active ? 0.045 : 0.022, 12, 12),
+      new THREE.SphereGeometry(active ? 0.05 : 0.022, 12, 12),
       new THREE.MeshBasicMaterial({
         color: active ? C_CORAL : C_INK,
         transparent: !active,
@@ -1270,7 +1310,7 @@ gsap.utils.toArray('.section-head h2, .section-head .eyebrow, .section-head .met
       })
     );
     node.position.copy(p);
-    node.userData = { idx: i, active, phase: Math.random() * Math.PI * 2 };
+    node.userData = { idx: i, active, phase: Math.random() * Math.PI * 2, label: active ? ACTIVE_LABELS[activeIdx++] : null };
     root.add(node);
     nodeMeshes.push(node);
   }
@@ -1301,9 +1341,11 @@ gsap.utils.toArray('.section-head h2, .section-head .eyebrow, .section-head .met
     arcs.push(line);
   }
 
-  /* -- Satellite orbits · 3 thin rings at varied inclinations -- */
+  /* -- Satellite orbits · 3 thin rings, one per founder product -- */
   const orbits = new THREE.Group();
   const ORBIT_RADII = [1.45, 1.5, 1.55]; // all inside safety margin
+  const SAT_LABELS  = ['orbitupi', 'bharatpay index', 'bytehash'];
+  const satMeshes = [];
   ORBIT_RADII.forEach((rad, i) => {
     const ring = new THREE.Mesh(
       new THREE.TorusGeometry(rad, 0.004, 8, 200),
@@ -1313,15 +1355,60 @@ gsap.utils.toArray('.section-head h2, .section-head .eyebrow, .section-head .met
     ring.rotation.z = i * 0.45;
     orbits.add(ring);
 
-    // little satellite chip riding the orbit
     const sat = new THREE.Mesh(
-      new THREE.SphereGeometry(0.035, 12, 12),
-      new THREE.MeshBasicMaterial({ color: i === 1 ? C_CORAL : C_SAGE })
+      new THREE.SphereGeometry(0.045, 14, 14),
+      new THREE.MeshBasicMaterial({ color: C_CORAL })
     );
-    sat.userData = { rad, angle: Math.random() * Math.PI * 2, speed: 0.35 + i * 0.15, parent: ring };
+    sat.userData = { rad, angle: i * 2.0, speed: 0.32 + i * 0.12, parent: ring, label: SAT_LABELS[i] };
     orbits.add(sat);
+    satMeshes.push(sat);
   });
   root.add(orbits);
+
+  /* -- HTML label overlay: project 3D node/satellite world positions
+        to 2D screen coords each frame so the labels read as native
+        product/chain tags rather than baked-in textures. ----------- */
+  const lblContainer = document.createElement('div');
+  lblContainer.className = 'hero-3d-labels';
+  mount.appendChild(lblContainer);
+
+  // Static centre wordmark
+  const centerLbl = document.createElement('span');
+  centerLbl.className = 'hero-lbl hero-lbl-center';
+  centerLbl.textContent = 'praneeth.me';
+  lblContainer.appendChild(centerLbl);
+
+  // Build a label for every labelled node + every satellite
+  const labels = [];
+  function addLabel(refMesh, text, type){
+    const el = document.createElement('span');
+    el.className = `hero-lbl hero-lbl-${type}`;
+    el.textContent = text;
+    lblContainer.appendChild(el);
+    labels.push({ el, refMesh });
+  }
+  nodeMeshes.forEach(n => { if (n.userData.label) addLabel(n, n.userData.label, 'node'); });
+  satMeshes.forEach(s => addLabel(s, s.userData.label, 'sat'));
+
+  // Reused vector to avoid per-frame allocation
+  const _wp = new THREE.Vector3();
+  function updateLabels(){
+    const W = renderer.domElement.clientWidth;
+    const H = renderer.domElement.clientHeight;
+    for (let i = 0; i < labels.length; i++){
+      const { el, refMesh } = labels[i];
+      refMesh.getWorldPosition(_wp);
+      const worldZ = _wp.z;
+      _wp.project(camera);
+      const sx = (_wp.x * 0.5 + 0.5) * W;
+      const sy = (-_wp.y * 0.5 + 0.5) * H;
+      // Fade out labels on the far side of the sphere
+      const op = Math.max(0, Math.min(1, (worldZ + 0.25) / 0.6));
+      // nudge slightly to the right so the tick mark connects cleanly
+      el.style.transform = `translate3d(${sx + 14}px, ${sy}px, 0)`;
+      el.style.opacity = op.toFixed(2);
+    }
+  }
 
   /* -- Mouse parallax (very subtle, on camera not mesh) -- */
   let mx = 0, my = 0;
@@ -1402,6 +1489,7 @@ gsap.utils.toArray('.section-head h2, .section-head .eyebrow, .section-head .met
     camera.lookAt(0, 0, 0);
 
     renderer.render(scene, camera);
+    updateLabels();
   }
   animate();
 
