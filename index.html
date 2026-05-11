@@ -1,679 +1,1227 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-    
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="author" content="Praneeth Reddy Arikatla" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="author" content="Praneeth Reddy Arikatla" />
+<meta name="theme-color" content="#f3ecdd" />
 
-    <!-- Primary Meta Tags -->
-    <title>Praneeth Reddy Arikatla</title>
-    <meta name="title" content="Praneeth Reddy Arikatla">
-    <meta name="description" content="DeFi Solutions Developer and Blockchain Enthusiast. Skilled in Blockchain, Web3, and Full-Stack Development with experience in creating innovative solutions in the blockchain ecosystem.">
+<title>Praneeth Reddy Arikatla — Senior Software Engineer · DeFi & Blockchain Compliance</title>
+<meta name="title" content="Praneeth Reddy Arikatla — Senior Software Engineer" />
+<meta name="description" content="Senior Software Engineer with 8+ years architecting high-performance full-stack systems. Blockchain compliance, DeFi protocols, real-time analytics. Currently at Solidus Labs. Founder of ByteHash, Orbit UPI, BharatPay Index." />
 
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://praneethreddy.me/" />
+<meta property="og:title" content="Praneeth Reddy Arikatla" />
+<meta property="og:description" content="Senior Software Engineer · DeFi & Blockchain Compliance. Solidus Labs · ByteHash · Orbit UPI · BharatPay Index." />
+<meta property="og:image" content="/img/cover.png" />
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://praneethreddy.me/">
-    <meta property="og:title" content="Praneeth Reddy Arikatla">
-    <meta property="og:description" content="DeFi Solutions Developer and Blockchain Enthusiast. Skilled in Blockchain, Web3, and Full-Stack Development with experience in creating innovative solutions in the blockchain ecosystem.">
-    <meta property="og:image" content="/img/cover.png">
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content="https://praneethreddy.me/" />
+<meta property="twitter:title" content="Praneeth Reddy Arikatla" />
+<meta property="twitter:description" content="Senior Software Engineer · DeFi & Blockchain Compliance. Solidus Labs · ByteHash · Orbit UPI · BharatPay Index." />
+<meta property="twitter:image" content="/img/cover.png" />
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://praneethreddy.me/">
-    <meta property="twitter:title" content="Praneeth Reddy Arikatla">
-    <meta property="twitter:description" content="DeFi Solutions Developer and Blockchain Enthusiast. Skilled in Blockchain, Web3, and Full-Stack Development with experience in creating innovative solutions in the blockchain ecosystem.">
-    <meta property="twitter:image" content="/img/cover.png">
+<link rel="icon" type="image/svg+xml" href="img/favicon.svg" />
+<link rel="shortcut icon" href="img/Icon.png" />
+<link rel="apple-touch-icon" href="img/Icon.png" />
 
-    <!--  Icon  EDIT -->
-    <link rel="shortcut icon" href="img/Icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HJ3E2X3W2X"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HJ3E2X3W2X"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-HJ3E2X3W2X');
+</script>
 
-    gtag('config', 'G-HJ3E2X3W2X');
-    </script>
+<style>
+  :root{
+    --cream: #f3ecdd;
+    --cream-2: #ece2cd;
+    --cream-3: #e6daBE;
+    --ink: #161310;
+    --ink-2: #2b2620;
+    --muted: #6b6055;
+    --line: #d8cdb5;
+    --coral: #e26a4a;
+    --coral-soft: #f1a78b;
+    --sage: #6a7a55;
+    --sky: #8eb3c6;
+    --gold: #c89a4a;
+    --radius-lg: 28px;
+    --radius-md: 18px;
+    --radius-sm: 12px;
+    --easing: cubic-bezier(.22,.61,.36,1);
+    --easing-soft: cubic-bezier(.4,0,.2,1);
+  }
 
-    <!-- Google Fonts
-    <link href="https://fonts.googleapis.com/css?family=Muli:400,600" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700" rel="stylesheet"> -->
+  *{box-sizing:border-box;margin:0;padding:0;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+  html{scroll-behavior:auto}
+  html,body{background:var(--cream);color:var(--ink);font-family:'Inter',system-ui,-apple-system,sans-serif;font-weight:400;line-height:1.5;overflow-x:hidden}
+  body{min-height:100vh}
 
-    <!--  plugins Css  -->
-    <link rel="stylesheet" type="text/css" href="css/plugins.css">
-    <!--  Custom Style CSS  -->
-    <link rel="stylesheet" href="css/style.css">
+  /* Selection */
+  ::selection{background:var(--ink);color:var(--cream)}
 
-    </head>
-    <body class="pilling-page nill-dark"  data-spy="scroll" data-target="#scrollspy" data-offset="1">
+  /* Custom cursor dot */
+  .cursor{position:fixed;top:0;left:0;width:10px;height:10px;border-radius:50%;background:var(--ink);pointer-events:none;z-index:9999;mix-blend-mode:difference;transform:translate(-50%,-50%);transition:width .25s var(--easing),height .25s var(--easing),opacity .2s;will-change:transform;display:none}
+  .cursor.ring{width:36px;height:36px;background:transparent;border:1px solid var(--ink);mix-blend-mode:difference;transition:transform .15s var(--easing-soft),width .25s var(--easing),height .25s var(--easing)}
+  .cursor.hover{width:60px;height:60px}
+  @media (pointer:fine){.cursor{display:block}}
 
-    <!--  Pre Loader  -->
-    <div id="overlayer">
-        <span class="spinner-grow spinner-grow-lg loader" role="status" aria-hidden="true"></span>
-    </div>
+  /* Loader */
+  #loader{position:fixed;inset:0;z-index:10000;background:var(--cream);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:18px;transition:opacity .6s var(--easing),visibility .6s}
+  #loader.hidden{opacity:0;visibility:hidden}
+  .loader-mark{font-family:'Instrument Serif',serif;font-size:48px;font-style:italic;letter-spacing:-.02em}
+  .loader-bar{width:140px;height:1px;background:var(--line);overflow:hidden;position:relative}
+  .loader-bar::after{content:"";position:absolute;inset:0;background:var(--ink);transform-origin:left;animation:load 1.6s var(--easing) forwards}
+  @keyframes load{0%{transform:scaleX(0)}100%{transform:scaleX(1)}}
 
-        <!-- Portfolio Single Modal -->
-        <div class="portfolio-single modal fade" id="portfolio-single" tabindex="-1" role="dialog" aria-labelledby="portfolioModalScrollable" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-scrollable" role="document">
-                <div class="modal-content bg-white">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="portfolioModalScrollable">My Work</h5>
-                        <button type="button" class="close text-muted" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="pt-4 pb-5">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-12 col-md-10 offset-md-1">
-                                        <div class="text-center">
-                                            <h2 class="text-dark mb-3">Single <span class="base-color"> Portfolio</span></h2>
-                                            <p class="text-muted max-width-450">In a professional context it often happens that private clients corder a publication to be made.</p>
-                                        </div>
-                                        <div class="row contact-info mt-5">
-                                            <div class="col-md-4">
-                                                <div class="text-center">
-                                                    <div>
-                                                        <h6>Created by:</h6>
-                                                        <p class="text-muted mb-0">John Doe</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4 p-title-border mt-3 mt-md-0">
-                                                <div class="text-center">
-                                                    <div>
-                                                        <h6 class="contact_detail-title">Completed on:</h6>
-                                                        <p class="text-muted mb-0">September 30, 2019</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4 mt-3 mt-md-0">
-                                                <div class="text-center">
-                                                    <div>
-                                                        <h6>Skills:</h6>
-                                                        <p class="text-muted mb-0">HTML5 / PHP / CSS3</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="mt-5">
-                                            <div class="portfolio-single-item">
-                                                <img src="img/005.jpg" class="d-block w-100 rounded" alt="...">
-                                            </div>
-                                        </div>
-                                        <div class="text-md-left mt-5">
-                                            <p class="my-3 text-muted">These words are here to provide the reader with a basic impression of how actual text will appear in its final presentation. This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. These words are here to provide the reader with a basic impression of how actual text will appear in its final presentation. Only for show.</p>
-                                            <p class="mt-3 mb-0 text-muted">These words are here to provide the reader with a basic impression of how actual text will appear in its final presentation. This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. These words are here to provide the reader with a basic impression of how actual text will appear in its final presentation. Only for show.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  /* Noise overlay */
+  .noise{position:fixed;inset:0;z-index:50;pointer-events:none;opacity:.05;mix-blend-mode:multiply;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
+
+  /* Nav */
+  nav.top{position:fixed;top:0;left:0;right:0;z-index:60;padding:16px 28px;display:flex;align-items:center;justify-content:space-between;backdrop-filter:blur(10px) saturate(140%);background:rgba(243,236,221,.5);border-bottom:1px solid transparent;transition:border-color .3s var(--easing),background .3s var(--easing),padding .3s var(--easing)}
+  nav.top.scrolled{border-color:var(--line);background:rgba(243,236,221,.88);padding:12px 28px}
+  /* Logo + nameplate */
+  nav.top .brand{display:inline-flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink);transition:opacity .25s}
+  nav.top .brand:hover{opacity:.85}
+  nav.top .brand .mark{width:36px;height:36px;border-radius:50%;background:radial-gradient(circle at 30% 30%,#f4d2bf 0%,#e26a4a 55%,#8c3a21 100%);position:relative;flex-shrink:0;box-shadow:0 4px 12px -4px rgba(140,58,33,.4),inset 0 1px 2px rgba(255,255,255,.4);overflow:hidden}
+  nav.top .brand .mark::before{content:"";position:absolute;inset:-2px;border-radius:50%;border:1px solid rgba(22,19,16,.18);}
+  nav.top .brand .mark::after{content:"";position:absolute;left:50%;top:50%;width:14px;height:14px;background:var(--cream);border-radius:50%;transform:translate(-50%,-50%);box-shadow:inset -2px -1px 3px rgba(140,58,33,.35)}
+  nav.top .brand .mark .ring{position:absolute;inset:-6px;border-radius:50%;border:1px dashed rgba(22,19,16,.22);animation:spin 24s linear infinite}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  nav.top .brand .nameplate{display:flex;flex-direction:column;line-height:1;gap:3px}
+  nav.top .brand .nameplate .n1{font-family:'Instrument Serif',serif;font-size:20px;font-style:italic;letter-spacing:-.005em;color:var(--ink)}
+  nav.top .brand .nameplate .n1 .last{color:var(--coral)}
+  nav.top .brand .nameplate .n2{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+  nav.top ul{list-style:none;display:flex;gap:28px;font-size:12.5px;font-weight:500;letter-spacing:.04em;text-transform:uppercase}
+  nav.top ul a{color:var(--ink);text-decoration:none;opacity:.65;transition:opacity .2s}
+  nav.top ul a:hover{opacity:1}
+  nav.top .nav-actions{display:inline-flex;align-items:center;gap:10px}
+  nav.top .cta{font-size:12.5px;font-weight:500;padding:10px 16px;border:1px solid var(--ink);border-radius:999px;text-decoration:none;color:var(--ink);background:transparent;transition:background .25s var(--easing),color .25s var(--easing);display:inline-flex;align-items:center;gap:8px;white-space:nowrap}
+  nav.top .cta:hover{background:var(--ink);color:var(--cream)}
+  nav.top .cta.alt{background:var(--ink);color:var(--cream)}
+  nav.top .cta.alt:hover{background:var(--coral);border-color:var(--coral)}
+  @media(max-width:980px){nav.top ul{display:none}}
+  @media(max-width:640px){nav.top .brand .nameplate .n2{display:none} nav.top .cta:not(.alt){display:none} nav.top{padding:14px 18px}}
+
+  /* Container */
+  .wrap{max-width:1380px;margin:0 auto;padding:0 28px}
+  @media(max-width:640px){.wrap{padding:0 20px}}
+
+  /* Typography */
+  h1,h2,h3,h4{font-family:'Instrument Serif',serif;font-weight:400;letter-spacing:-.02em;line-height:1}
+  .serif-it{font-family:'Instrument Serif',serif;font-style:italic}
+  .mono{font-family:'JetBrains Mono',monospace;font-size:11px;text-transform:uppercase;letter-spacing:.12em}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+  .eyebrow::before{content:"";width:6px;height:6px;background:var(--coral);border-radius:50%}
+
+  /* HERO */
+  .hero{position:relative;min-height:100vh;padding:120px 0 60px;overflow:hidden}
+  .hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;position:relative;z-index:2}
+  @media(max-width:980px){.hero-grid{grid-template-columns:1fr}}
+  .hero-left h1{font-size:clamp(56px,9vw,148px);line-height:.92}
+  .hero-left h1 .it{font-style:italic;color:var(--coral)}
+  .hero-left .lede{margin-top:32px;max-width:520px;font-size:18px;color:var(--ink-2);line-height:1.55}
+  .hero-left .pill{display:inline-flex;align-items:center;gap:8px;margin-bottom:28px;padding:8px 14px 8px 8px;background:rgba(255,255,255,.5);border:1px solid var(--line);border-radius:999px;font-size:12px;letter-spacing:.05em}
+  .hero-left .pill .dot{width:8px;height:8px;background:var(--sage);border-radius:50%;position:relative}
+  .hero-left .pill .dot::after{content:"";position:absolute;inset:-2px;border-radius:50%;border:1px solid var(--sage);animation:pulse 2.4s ease-out infinite}
+  @keyframes pulse{0%{transform:scale(.8);opacity:.8}100%{transform:scale(2.2);opacity:0}}
+  .hero-left .meta{display:flex;gap:28px;margin-top:40px}
+  .hero-left .meta div{display:flex;flex-direction:column;gap:4px}
+  .hero-left .meta .v{font-family:'Instrument Serif',serif;font-size:28px;line-height:1}
+  .hero-left .meta .l{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+  .hero-left .ctas{display:flex;gap:14px;margin-top:40px;flex-wrap:wrap}
+  .btn{display:inline-flex;align-items:center;gap:10px;padding:16px 24px;border-radius:999px;font-size:14px;font-weight:500;letter-spacing:.02em;text-decoration:none;transition:transform .25s var(--easing),background .25s,color .25s,box-shadow .3s}
+  .btn-primary{background:var(--ink);color:var(--cream)}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 14px 28px -10px rgba(0,0,0,.35)}
+  .btn-ghost{background:transparent;color:var(--ink);border:1px solid var(--ink)}
+  .btn-ghost:hover{background:var(--ink);color:var(--cream)}
+  .btn .arr{transition:transform .25s var(--easing)}
+  .btn:hover .arr{transform:translateX(3px)}
+
+  .hero-right{position:relative;aspect-ratio:1;min-height:420px}
+  .hero-canvas-wrap{position:absolute;inset:0}
+  .hero-canvas-wrap canvas{width:100%!important;height:100%!important;display:block}
+  .hero-labels{position:absolute;inset:0;pointer-events:none}
+  .hero-labels span{position:absolute;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+  .hero-labels .l1{top:8%;left:0}
+  .hero-labels .l2{bottom:10%;right:0;text-align:right}
+  .hero-labels .l3{top:50%;right:-8px;writing-mode:vertical-rl;transform:rotate(180deg)}
+
+  .scroll-hint{position:absolute;left:28px;bottom:32px;display:flex;align-items:center;gap:10px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+  .scroll-hint::before{content:"";width:30px;height:1px;background:var(--ink);animation:slide 1.8s var(--easing) infinite}
+  @keyframes slide{0%,100%{transform:scaleX(.3);transform-origin:left}50%{transform:scaleX(1);transform-origin:left}}
+
+  /* Marquee */
+  .marquee{padding:32px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;white-space:nowrap;background:linear-gradient(180deg,rgba(0,0,0,.02),transparent);position:relative}
+  .marquee-track{display:inline-flex;gap:56px;animation:marquee 38s linear infinite}
+  .marquee span{font-family:'Instrument Serif',serif;font-style:italic;font-size:40px;color:var(--ink);opacity:.85}
+  .marquee span .star{display:inline-block;margin-left:56px;color:var(--coral);font-style:normal}
+  @keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+  /* Generic section */
+  section{position:relative;padding:120px 0}
+  .section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:32px;margin-bottom:64px;flex-wrap:wrap}
+  .section-head h2{font-size:clamp(40px,6vw,84px);max-width:780px;line-height:.95}
+  .section-head .meta-col{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);text-align:right;max-width:280px;line-height:1.6}
+
+  /* About / Manifesto */
+  .manifesto{position:relative}
+  .manifesto-content{font-family:'Instrument Serif',serif;font-size:clamp(28px,3.6vw,58px);line-height:1.15;letter-spacing:-.01em;max-width:1100px}
+  .manifesto-content .word{display:inline-block;transition:color .25s var(--easing);color:rgba(22,19,16,.18)}
+  .manifesto-content .word.show{color:var(--ink)}
+  .manifesto-content .word.show.accent{color:var(--coral);font-style:italic}
+
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:80px;border-top:1px solid var(--line);padding-top:48px}
+  @media(max-width:780px){.stats{grid-template-columns:repeat(2,1fr)}}
+  .stat .v{font-family:'Instrument Serif',serif;font-size:clamp(48px,5vw,88px);line-height:1}
+  .stat .v .it{font-style:italic;color:var(--coral)}
+  .stat .l{margin-top:12px;font-size:13px;color:var(--muted);line-height:1.45;max-width:200px}
+
+  /* Experience timeline */
+  .timeline{display:grid;grid-template-columns:200px 1fr;gap:48px}
+  @media(max-width:780px){.timeline{grid-template-columns:1fr}}
+  .timeline-side{position:sticky;top:120px;align-self:start;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+  .timeline-side .now{display:inline-flex;align-items:center;gap:8px;color:var(--ink);margin-bottom:18px}
+  .timeline-side .now .dot{width:8px;height:8px;background:var(--sage);border-radius:50%;animation:pulse2 2s infinite}
+  @keyframes pulse2{0%,100%{opacity:1}50%{opacity:.4}}
+  .timeline-list{display:flex;flex-direction:column;gap:0}
+  .tl-item{padding:32px 0;border-top:1px solid var(--line);display:grid;grid-template-columns:100px 1fr auto;gap:32px;align-items:start;transition:padding .35s var(--easing)}
+  .tl-item:hover{padding-left:24px}
+  .tl-item:last-child{border-bottom:1px solid var(--line)}
+  .tl-item .year{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;color:var(--muted);padding-top:8px}
+  .tl-item .body h3{font-family:'Instrument Serif',serif;font-size:32px;line-height:1.1;margin-bottom:8px}
+  .tl-item .body h3 .at{color:var(--coral);font-style:italic}
+  .tl-item .body p{font-size:15px;color:var(--ink-2);max-width:640px;line-height:1.55;margin-top:8px}
+  .tl-item .body .tags{margin-top:14px;display:flex;flex-wrap:wrap;gap:6px}
+  .tl-item .body .tags span{font-family:'JetBrains Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:.08em;padding:5px 10px;border:1px solid var(--line);border-radius:999px;color:var(--ink-2)}
+  .tl-item .role{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-align:right;padding-top:8px;white-space:nowrap}
+  @media(max-width:780px){.tl-item{grid-template-columns:1fr;gap:12px}.tl-item .role,.tl-item .year{text-align:left}}
+
+  /* Projects: pinned scroll panels */
+  .projects-pin{position:relative}
+  .projects-track{position:relative}
+  .project{min-height:100vh;display:grid;grid-template-columns:1.1fr 1fr;gap:64px;align-items:center;padding:120px 0;border-top:1px solid var(--line)}
+  .project:first-child{border-top:none}
+  @media(max-width:980px){.project{grid-template-columns:1fr;gap:32px;padding:80px 0}}
+  .project-info .num{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.14em;color:var(--muted);margin-bottom:18px;display:flex;align-items:center;gap:14px}
+  .project-info .num::after{content:"";flex:1;height:1px;background:var(--line);max-width:60px}
+  .project-info h3{font-size:clamp(42px,5.4vw,78px);margin-bottom:18px;line-height:1}
+  .project-info h3 .it{color:var(--coral);font-style:italic}
+  .project-info .domain{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--ink-2);margin-bottom:24px;letter-spacing:.04em}
+  .project-info .desc{font-size:17px;color:var(--ink-2);max-width:540px;line-height:1.6}
+  .project-info .features{margin-top:24px;display:flex;flex-direction:column;gap:10px}
+  .project-info .features li{list-style:none;display:flex;gap:12px;align-items:flex-start;font-size:14px;color:var(--ink-2)}
+  .project-info .features li::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--coral);margin-top:9px;flex-shrink:0}
+  .project-info .stack{margin-top:28px;display:flex;flex-wrap:wrap;gap:6px}
+  .project-info .stack span{font-family:'JetBrains Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:.08em;padding:6px 11px;background:rgba(255,255,255,.55);border:1px solid var(--line);border-radius:999px}
+  .project-info .visit{margin-top:32px;display:inline-flex;align-items:center;gap:10px;font-size:14px;font-weight:500;color:var(--ink);text-decoration:none;border-bottom:1px solid var(--ink);padding-bottom:4px;transition:gap .25s var(--easing)}
+  .project-info .visit:hover{gap:14px}
+
+  .project-visual{position:relative;aspect-ratio:4/5;border-radius:var(--radius-lg);overflow:hidden;background:linear-gradient(155deg,#f7f0e0 0%,#ecdfc4 100%);border:1px solid var(--line);transform-style:preserve-3d}
+  .project-visual::before{content:"";position:absolute;inset:0;background-image:radial-gradient(circle at 25% 30%,rgba(226,106,74,.18),transparent 55%),radial-gradient(circle at 75% 70%,rgba(106,122,85,.18),transparent 55%);pointer-events:none}
+  .project-visual .glyph{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:'Instrument Serif',serif;font-style:italic;font-size:clamp(120px,18vw,260px);color:rgba(22,19,16,.08);user-select:none;pointer-events:none}
+  .project-visual .floating{position:absolute;border-radius:999px;background:rgba(255,255,255,.55);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.7);padding:10px 16px;font-family:'JetBrains Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:var(--ink);box-shadow:0 12px 24px -12px rgba(0,0,0,.18)}
+  .project-visual .corner{position:absolute;bottom:24px;left:24px;font-family:'Instrument Serif',serif;font-style:italic;font-size:32px;color:var(--ink)}
+  .project-visual .corner-top{position:absolute;top:24px;right:24px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2);text-align:right;line-height:1.7}
+
+  /* Project-specific visuals */
+  .v-bytehash{background:linear-gradient(155deg,#1a1c2c 0%,#2d2640 60%,#3a2a4d 100%);color:#f1ead8}
+  .v-bytehash .glyph{color:rgba(241,234,216,.08)}
+  .v-bytehash .floating{background:rgba(241,234,216,.08);border-color:rgba(241,234,216,.15);color:#f1ead8}
+  .v-bytehash .corner,.v-bytehash .corner-top{color:#f1ead8}
+
+  .v-orbit{background:linear-gradient(155deg,#fef0e3 0%,#f3c79c 50%,#e89a72 100%)}
+  .v-orbit .glyph{color:rgba(22,19,16,.1)}
+
+  .v-bharat{background:linear-gradient(155deg,#f4f0e2 0%,#dbe3c9 60%,#b6c8a0 100%)}
+  .v-bharat .glyph{color:rgba(22,19,16,.1)}
+
+  .v-circle{background:linear-gradient(155deg,#dde9ef 0%,#a9c5d5 60%,#7ba3b9 100%)}
+  .v-circle .glyph{color:rgba(255,255,255,.18)}
+
+  .v-token{background:linear-gradient(155deg,#f6e8d8 0%,#e4c39e 60%,#c79966 100%)}
+
+  .v-patch{background:linear-gradient(155deg,#fceee6 0%,#f5c9b6 50%,#e69a82 100%)}
+
+  /* SVG decoration inside cards */
+  .project-visual svg.deco{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+
+  /* Stack ticker */
+  .stack-section{padding:80px 0;background:linear-gradient(180deg,var(--cream) 0%,var(--cream-2) 100%);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .stack-section h3{font-size:clamp(28px,3.4vw,46px);max-width:680px;margin-bottom:48px}
+  .stack-section h3 .it{color:var(--coral);font-style:italic}
+  .ticker-row{display:flex;gap:48px;overflow:hidden;mask:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+  .ticker-row + .ticker-row{margin-top:24px}
+  .ticker-row .track{display:flex;gap:48px;animation:tick 32s linear infinite;white-space:nowrap}
+  .ticker-row.reverse .track{animation:tick-r 36s linear infinite}
+  .ticker-row .chip{font-family:'JetBrains Mono',monospace;font-size:14px;padding:14px 22px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.45);display:inline-flex;align-items:center;gap:10px;color:var(--ink)}
+  .ticker-row .chip .d{width:6px;height:6px;border-radius:50%;background:var(--coral)}
+  @keyframes tick{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+  @keyframes tick-r{0%{transform:translateX(-50%)}100%{transform:translateX(0)}}
+
+  /* Contact / CTA */
+  .cta-section{padding:140px 0 80px;position:relative;overflow:hidden}
+  .cta-card{background:var(--ink);color:var(--cream);border-radius:var(--radius-lg);padding:80px 64px;position:relative;overflow:hidden}
+  @media(max-width:780px){.cta-card{padding:48px 28px}}
+  .cta-card h2{font-size:clamp(48px,7vw,108px);line-height:.95;max-width:900px}
+  .cta-card h2 .it{font-style:italic;color:var(--coral-soft)}
+  .cta-card .sub{margin-top:32px;font-size:17px;max-width:540px;opacity:.7;line-height:1.55}
+  .cta-card .links{margin-top:48px;display:flex;flex-wrap:wrap;gap:14px}
+  .cta-card .links a{display:inline-flex;align-items:center;gap:10px;padding:16px 22px;border:1px solid rgba(243,236,221,.2);color:var(--cream);text-decoration:none;border-radius:999px;font-size:14px;font-weight:500;transition:background .25s,border-color .25s}
+  .cta-card .links a:hover{background:var(--cream);color:var(--ink);border-color:var(--cream)}
+  .cta-card .links a.primary{background:var(--cream);color:var(--ink);border-color:var(--cream)}
+  .cta-card .links a.primary:hover{background:var(--coral);border-color:var(--coral);color:var(--cream)}
+  .cta-glow{position:absolute;width:560px;height:560px;border-radius:50%;background:radial-gradient(circle,rgba(226,106,74,.45) 0%,transparent 65%);filter:blur(60px);right:-160px;bottom:-220px;pointer-events:none}
+  .cta-card .info-grid{margin-top:80px;display:grid;grid-template-columns:repeat(3,1fr);gap:24px;padding-top:32px;border-top:1px solid rgba(243,236,221,.15)}
+  @media(max-width:780px){.cta-card .info-grid{grid-template-columns:1fr}}
+  .cta-card .info-grid .it-l{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;opacity:.5;margin-bottom:8px}
+  .cta-card .info-grid .it-v{font-family:'Instrument Serif',serif;font-size:24px}
+
+  /* Footer */
+  footer{padding:48px 0;border-top:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:18px}
+  footer .left{display:flex;align-items:center;gap:14px;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+  footer .right{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+  footer a{color:var(--ink);text-decoration:none}
+
+  /* Word wrap reveal */
+  .reveal-up{opacity:0;transform:translateY(40px) rotateX(20deg);transition:opacity .8s var(--easing),transform .8s var(--easing)}
+  .reveal-up.in{opacity:1;transform:none}
+
+  /* Sofi-style depth orbs */
+  .orb-bg{position:absolute;border-radius:50%;filter:blur(60px);pointer-events:none;opacity:.55;mix-blend-mode:multiply}
+
+  /* Reduce motion */
+  @media (prefers-reduced-motion: reduce){
+    *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+    .marquee-track,.ticker-row .track{animation:none}
+  }
+</style>
+</head>
+<body>
+
+<div id="loader"><div class="loader-mark">praneeth.</div><div class="loader-bar"></div></div>
+<div class="noise"></div>
+<div class="cursor ring" id="cursor"></div>
+
+<nav class="top" id="nav">
+  <a href="#top" class="brand" data-hover aria-label="Praneeth Reddy — home">
+    <span class="mark" aria-hidden="true"><span class="ring"></span></span>
+    <span class="nameplate">
+      <span class="n1">Praneeth <span class="last">Reddy.</span></span>
+      <span class="n2">SR · SWE · 2026</span>
+    </span>
+  </a>
+  <ul>
+    <li><a href="#work" data-hover>Work</a></li>
+    <li><a href="#projects" data-hover>Projects</a></li>
+    <li><a href="#stack" data-hover>Stack</a></li>
+    <li><a href="#contact" data-hover>Contact</a></li>
+  </ul>
+  <div class="nav-actions">
+    <a href="Praneeth_Reddy_Arikatla_Resume_2026.pdf" target="_blank" rel="noopener" class="cta" data-hover>Résumé <span>↓</span></a>
+    <a href="#contact" class="cta alt" data-hover>Get in touch <span>↗</span></a>
+  </div>
+</nav>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="orb-bg" style="background:radial-gradient(circle,#f1a78b,transparent 70%);width:420px;height:420px;top:-120px;left:-120px"></div>
+    <div class="orb-bg" style="background:radial-gradient(circle,#c2d0a8,transparent 70%);width:520px;height:520px;bottom:-220px;right:-180px"></div>
+
+    <div class="wrap">
+      <div class="hero-grid">
+        <div class="hero-left">
+          <div class="pill"><span class="dot"></span>Available for select consults · 2026</div>
+          <h1>
+            Building <span class="it">systems</span><br/>
+            that keep<br/>
+            crypto <span class="it">honest.</span>
+          </h1>
+          <p class="lede">
+            Senior Software Engineer with 8+ years architecting high-performance full-stack systems —
+            blockchain compliance at <strong>Solidus Labs</strong>, on-chain monitoring for <strong>Circle (USDC)</strong>,
+            and founder of <strong>ByteHash</strong>, <strong>Orbit UPI</strong> &amp; <strong>BharatPay Index</strong>.
+          </p>
+          <div class="ctas">
+            <a href="#projects" class="btn btn-primary" data-hover>See selected work <span class="arr">→</span></a>
+            <a href="Praneeth_Reddy_Arikatla_Resume_2026.pdf" target="_blank" rel="noopener" class="btn btn-ghost" data-hover>Download résumé <span class="arr">↓</span></a>
+            <a href="#contact" class="btn btn-ghost" data-hover>Let's talk <span class="arr">→</span></a>
+          </div>
+          <div class="meta">
+            <div><span class="v">8+</span><span class="l">years</span></div>
+            <div><span class="v">3–5×</span><span class="l">spec-driven gains</span></div>
+            <div><span class="v">$11K</span><span class="l">hackathon awards</span></div>
+          </div>
         </div>
 
-    <!--  Page Pilling  Strat  -->
-    <div id="pagepiling" class="pagepiling">
+        <div class="hero-right">
+          <div class="hero-canvas-wrap" id="hero-canvas-wrap"></div>
+          <div class="hero-labels">
+            <span class="l1">/ Hyderabad · UTC+5:30</span>
+            <span class="l2">/ currently · Solidus Labs</span>
+            <span class="l3">// scroll to explore</span>
+          </div>
+        </div>
+      </div>
 
-        <!--   Header Start -->
-        <header>
-            <div class="logo-area">
-                <a href="index.html" class="logo">
-                    <span class="size-sm mb-0 font-weight-bold pl-3 text-dark text-left">P<span class="base-color">raneeth Reddy</span></span>
-                </a>
-                <a href="https://blog.praneethreddy.me" target="_blank" class="pill-button align-self-md-center">Blog</a>
-            </div>
-            <div class="header-info-area">
-                <a class="overlay-menu-toggler lni-menu size-md" href="javascript:void(0);"></a>
-                <!--    Overlay Menu Start    -->
-                <div class="overlay-menu bg-blue py-3 px-4 text-center center-item">
-                    <!-- Overlay Menu -->
-                    <div id="scrollspy" class="overlay-menu-list">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-lg-8 offset-lg-2 overlay-nav">
-                                    <ul class="list-group text-left" id="myMenu">
-                                        <li data-menuanchor="home" class="list-group-item"><a href="#home">Home</a></li>
-                                        <li data-menuanchor="about" class="list-group-item"><a href="#about">About me</a></li>
-                                        <li data-menuanchor="resume" class="list-group-item"><a href="#resume">Resume</a></li>
-                                        <!-- <li data-menuanchor="services" class="list-group-item"><a href="#services">What I'm Doing</a></li> -->
-                                        <li data-menuanchor="portfolio" class="list-group-item"><a href="#portfolio">Portfolio</a></li>
-                                        <li data-menuanchor="contact" class="list-group-item"><a href="#contact">Contact</a></li>
-                                    </ul>
-                                    <ul class="list-group contact-info text-left mb-0">
-                                        <li class="list-group-item"><span>Contact Info :</span></li>
-                                        <!-- <li class="list-group-item"><span><i class="lni-map-marker"></i> Berlin, Germany</span></li> -->
-                                        <!--<li class="list-group-item"><span><i class="lni-phone-handset"></i> +1 212-695-1962</span></li>-->
-                                        <!--<li class="list-group-item"><span><i class="lni-envelope"></i> <a href="https://retrina.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="452b2c292905372031372c2b246b262a28">[email&#160;protected]</a></span></li> -->
-                                        <li class="list-group-item"><span><i class="lni-envelope"></i> praneeth6226@gmail.com</span></li>
-                                        <li class="list-group-item"><span>Follow me :</span></li>
-                                        <li class="list-group-item">
-                                            <ul class="list-inline socails">
-                                                <!--
-                                                <li class="list-inline-item"><a href="#"><i class="lni-facebook-filled"></i></a></li>-->
-                                                <li class="list-inline-item"><a href="https://twitter.com/0xViking" target = "_blank"><i class="lni-twitter-filled"></i></a></li>
-                                                <li class="list-inline-item"><a href="https://github.com/0xViking/" target = "_blank"><i class="lni-github-original"></i></a></li>
-                                                <li class="list-inline-item"><a href="https://www.linkedin.com/in/praneethreddyarikatla" target = "_blank"><i class="lni-linkedin-original"></i></a></li>
-                                                <li class="list-inline-item"><a href="https://hashnode.com/@0xViking" target = "_blank"><i class="lni-blogger text-dark"></i></a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--    Overlay Menu End    -->
-            </div>
-        </header>
-        <!--   Header End   -->
-
-        <!--    Hero Start    -->
-        <section class="section pp-scrollable hero hero-02 full-screen p-0 bg-dark" id="home" data-navigation-color="#fff" data-navigation-tooltip="HOME">
-            <div class="container-fluid">
-                <div class="title-small">
-                    <p class="text-dark">Home</p>
-                </div>
-                <div class="row justify-content-center" id="hero-slider">
-                    <div class="owl-carousel owl-theme">
-                        <!--  Item1 -->
-                        <div class="hero-slide hero-item1 full-screen"></div>
-                        <!--  Item2 -->
-                        <div class="hero-slide hero-item2 full-screen"></div>
-                        <!--  Item3 -->
-                        <div class="hero-slide hero-item3 full-screen"></div>
-                    </div>
-                </div>
-                <div class="text-center hero-content">
-                    <div class="col-lg-12">
-                        <div class="hero-content text-center">
-                            <img src="img/meone.jpg" alt="" class="rounded-circle img-thumbnail">
-                            <h3 class="text-dark mb-0 mt-3">I'm Praneeth Reddy Arikatla</h3>
-                            <h1 class="text-dark text-capitalize mb-3"><span class="base-color">A  </span> <span class="element" data-elements="Thoughtful Vicenarian., Software Developer., WEB3 Enthusiast., Innovator., Freelancer."></span></h1>
-                            <div>
-                                <ul class="list-inline social-icon mt-2">
-                                    <!--
-                                    <li class="list-inline-item"><a href="javascript:void(0);"><i class="lni-facebook-filled text-dark"></i></a></li>-->
-                                    <li class="list-inline-item"><a href="https://twitter.com/0xViking" target = "_blank"><i class="lni-twitter-filled text-dark"></i></a></li>
-                                    <li class="list-inline-item"><a href="https://github.com/0xViking/" target = "_blank"><i class="lni-github-original text-dark"></i></a></li>
-                                    <li class="list-inline-item"><a href="https://www.linkedin.com/in/praneethreddyarikatla" target = "_blank"><i class="lni-linkedin-original text-dark"></i></a></li>
-                                    <li class="list-inline-item"><a href="https://hashnode.com/@0xViking" target = "_blank"><i class="lni-blogger text-dark"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="hero-icon">
-                    <a href="#about">
-                        <i class="lni-arrow-down text-dark size-sm"></i>
-                    </a>
-                </div>
-            </div>
-        </section>
-        <!--    Hero End    -->
-
-        <!--   About Start   -->
-        <section id="about" class="section pp-scrollable about text-dark bg-dark" data-navigation-color="#fff" data-navigation-tooltip="ABOUT ME">
-            <div class="display-table">
-                <div class="display-content">
-                    <div class="container">
-                        <div class="row">
-                            <div class="title-small">
-                                <p class="text-dark">About me</p>
-                            </div>
-                        </div>
-                        <div class="row mt-4">
-                            <div class="col-lg-6">
-                                <img src="img/ivy-fest.jpg" alt="/" class="rounded img-thumbnail w-100">
-                            </div>
-                            <div class="col-lg-6 personal-item  mb-4 mb-lg-0">
-                                <h2 class="text-dark mb-2">About <span class="base-color">Me</span></h2>
-                                <h5 class="text-dark mb-3">Hi 👋 I'm Praneeth Reddy Arikatla, DeFi Solutions Developer and Blockchain Enthusiast. Skilled in Blockchain, Web3, and Full-Stack Development with experience in creating innovative solutions in the blockchain ecosystem. </h5>
-                                <div class="row">
-                                    <div class="col-lg-5 col-sm-6 personal-info">
-                                        <!-- <p class="text-dark">Birthday : <br/><span class="text-gray"> 26/02/2003</span></p>
-                                         -->
-                                        <p class="text-dark">Born : <br/><span class="text-gray"> Hyderabad, India</span></p>
-                                    </div>
-                                    <div class="col-lg-5 col-sm-6 personal-info">
-                                        <!-- <p class="text-dark">Living : <br/><span class="text-gray">Hyderabad, India</span></p> -->
-                                        <!--<p class="text-dark">Degree : <span class="text-gray">Master</span></p>-->
-                                        <p class="text-dark">Mail : <br/> <span class="text-gray"> praneeth6226@gmail.com </span> </p> 
-                                        <!--<p class="text-dark">Mail : <span class="text-gray"><a href="" class="__cf_email__" data-cfemail="5637343516383f3a3a7835393b">[email&#160;protected]</a></span></p> -->
-                                        <!--<p class="text-dark">Freelance : <span class="text-gray">Available</span></p>-->
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-12">
-                                        <!-- <a target="_blank" href="https://tks.life/profile/dickson.wu#about" class="pill-button mt-3 mb-lg-0 mr-4">See Portfolio</a> -->
-                                        <!-- <a href="#contact" class="pill-button mt-3 mb-lg-0">Send Message</a> -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                        </div>
-                        
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--    About End    -->
-
-        <!--   Resume Start   -->
-        <section id="resume" class="section pp-scrollable resume bg-dark" data-navigation-color="#fff" data-navigation-tooltip="RESUME">
-            <div class="display-table">
-                <div class="display-content">
-                    <div class="container">
-                        <div class="row">
-                            <div class="title-small">
-                                <p class="text-dark">Resume</p>
-                            </div>
-                            <div class="col-lg-12">
-                                <div class="text-left">
-                                    <h2 class="text-dark mb-3">My <span class="base-color">Resume<a href="./Praneeth_Reddy_Arikatla_22-06-23.pdf" target="_blank" download="praneeth-reddy-resume.pdf" class="lni-download pill-button ml-3 mb-2 align-self-md-center"> RESUME</a>
-                                    </span></h2>
-                                    <p class="text-muted">I am available for fulltime opportunities as well as freelance Projects.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row mt-4">
-                            <div class="col-lg-6">
-                                <h3 class="text-dark mb-2"><i class="lni-graduation base-color"></i> Education</h3>
-                                <ul class="timeline">
-                                    <li>
-                                        <h6 class="base-color mb-0">Alliance4Tech Exchange Program, Technische Universität Berlin</h6>
-                                        <small class="text-muted">October 2021 — August 2022</small>
-                                        <p class="text-dark">Berlin, Germany</p>
-                                    </li>
-                                    <li>
-                                        <h6 class="base-color mb-0">MSc in Computer Science and Engineering, Politecnico di Milano</h6>
-                                        <small class="text-muted">September 2020 — Discontinued</small>
-                                        <p class="text-dark">Milan, Italy</p>
-                                    </li>
-                                    <li>
-                                        <h6 class="base-color mb-0">Bachelor of Technology in Computer Science and Engineering, Andhra University</h6>
-                                        <small class="text-muted">August 2013 — March 2017</small>
-                                        <p class="text-dark">Andhra Pradesh, India</p>
-                                    </li>
-                                    <li>
-                                        <h6 class="base-color mb-0">Technology Entrepreneurship Program, Indian School of Business</h6>
-                                        <small class="text-muted">July 2015 — June 2016</small>
-                                        <p class="text-dark">Hyderabad, India</p>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="col-lg-6">
-                                <h3 class="text-dark mb-2"><i class="lni-briefcase base-color"></i> Experience</h3>
-                                <ul class="timeline">
-                                    <li>
-                                        <h6 class="base-color mb-0">DeFi Solutions Developer, Solidus Labs</h6>
-                                        <small class="text-muted">July 2022 — Present</small>
-                                        <p class="text-dark">Develop compliance solutions for clients like the NY Department of Financial Services using technologies such as Python, FastAPI, Docker, and AWS.</p>
-                                    </li>
-                                    <li>
-                                        <h6 class="base-color mb-0">Founder & Developer at bytehash.tech</h6>
-                                        <small class="text-muted">March 2022 — Present</small>
-                                        <p class="text-dark">Built a chain-agnostic tool for testing and interacting with smart contracts, winning awards in the Web3Con hackathon.</p>
-                                    </li>
-                                    <li>
-                                        <h6 class="base-color mb-0">Freelance Developer at tokensniffer.com</h6>
-                                        <small class="text-muted">November 2021 — July 2022</small>
-                                        <p class="text-dark">Developed tools for tracking crypto flows and scam detection.</p>
-                                    </li>
-                                    <li>
-                                        <h6 class="base-color mb-0">Freelance Developer at patchwork-kingdoms.com</h6>
-                                        <small class="text-muted">February 2021 — July 2022</small>
-                                        <p class="text-dark">Contributed to an NFT project raising funds for UNICEF.</p>
-                                    </li>
-                                    <li>
-                                        <h6 class="base-color mb-0">Software Engineer, Ivy Software Development Services Pvt Ltd</h6>
-                                        <small class="text-muted">October 2018 — November 2020</small>
-                                        <p class="text-dark">Developed casino slot games using PixiJS and other frontend tools.</p>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="row pt-6">
-                            <div class="col-lg-6">
-                                <div class="skill-box pt-4 pt-lg-0 mt-4 mt-lg-0">
-                                    <div class="skillbar clearfix" data-percent="85%">
-                                        <div class="skillbar-title"><span>Python,C, C++, Core Java, JavaScript</span></div>
-                                        <div class="skillbar-bar"></div>
-                                        <!-- <div class="skill-bar-percent">95%</div> -->
-                                    </div>
-                                    <div class="skillbar clearfix " data-percent="80%">
-                                        <div class="skillbar-title"><span>Solidity, React, Go</span></div>
-                                        <div class="skillbar-bar"></div>
-                                        <!-- <div class="skill-bar-percent">80%</div> -->
-                                    </div>
-                                    <div class="skillbar clearfix" data-percent="80%">
-                                        <div class="skillbar-title"><span>SQL, HTML & CSS</span></div>
-                                        <div class="skillbar-bar"></div>
-                                        <!-- <div class="skill-bar-percent">75%</div> -->
-                                    </div>
-                                    <!-- <div class="skillbar clearfix" data-percent="80%">
-                                        <div class="skillbar-title"><span>JQuery</span></div>
-                                        <div class="skillbar-bar"></div>
-                                        <div class="skill-bar-percent">80%</div>
-                                    </div> -->
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="skill-box pt-4 pt-lg-0 mt-4 mt-lg-0">
-                                    <div class="skillbar clearfix" data-percent="85%">
-                                        <div class="skillbar-title"><span>Technical Analysis, Problem Solving, Analytical Skills</span></div>
-                                        <div class="skillbar-bar"></div>
-                                        <!-- <div class="skill-bar-percent">95%</div> -->
-                                    </div>
-                                    <div class="skillbar clearfix " data-percent="85%">
-                                        <div class="skillbar-title"><span>Communication, Collaboration, Interpersonal Skills</span></div>
-                                        <div class="skillbar-bar"></div>
-                                        <!-- <div class="skill-bar-percent">85%</div> -->
-                                    </div>
-                                    <div class="skillbar clearfix" data-percent="95%">
-                                        <div class="skillbar-title"><span>Fast Learning, Team player</span></div>
-                                        <div class="skillbar-bar"></div>
-                                        <!-- <div class="skill-bar-percent">75%</div> -->
-                                    </div><!-- <div class="skillbar clearfix" data-percent="80%">
-                                        <div class="skillbar-title"><span>Photoshop</span></div>
-                                        <div class="skillbar-bar"></div>
-                                        <div class="skill-bar-percent">80%</div>
-                                    </div> -->
-                                </div>
-                            </div>
-                        </div>
-                        </br>
-                        <p>Also have expereince with many developnt tools and environments like, multiple IDE's, Hardhat, web3.js, ethers.js, pixi.js, tweenmax.js, nodejs, recently started tinkering with typescript, tailwind.css, next.js, express.js, docker, kubernetes, aws, clickhouse, Snowflake, Kafka, Redis, etc.,</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--   Resume End   -->
-
-        <!--  Portfolio Start  -->
-        <section id="portfolio" class="section pp-scrollable portfolio bg-dark" data-navigation-color="#fff" data-navigation-tooltip="PORTFOLIO">
-            <div class="display-table">
-                <div class="display-content">
-                    <div class="container">
-                        <div class="row">
-                            <div class="title-small">
-                                <p class="text-dark">Portfolio</p>
-                            </div>
-                            <div class="col-lg-12">
-                                <div class="text-left">
-                                    <h2 class="text-dark">My <span class="base-color">Portfolio</span></h2>
-                                    <p class="text-muted mx-auto section-subtitle mt-3">Check Out All The Things I've Done!</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row mt-4">
-                            <!--   Portfolio Filters   -->
-                            <ul id="portfolio-filter" class="list-unstyled list-inline mb-0 col-lg-12 text-left portfolio-filter">
-                                <li class="list-inline-item">
-                                    <a href="#" data-filter="*" class="active my-1">All</a>
-                                </li>
-                                <li class="list-inline-item">
-                                    <a href="#" data-filter=".hackathon" class="my-1">Hackathons</a>
-                                </li>
-                                <li class="list-inline-item">
-                                    <a href="#" data-filter=".web3projects" class="my-1">Web3 Projects</a>
-                                </li>
-                                <li class="list-inline-item">
-                                    <a href="#" data-filter=".articles" class="my-1">Articles</a>
-                                </li>
-                                <li class="list-inline-item">
-                                    <a href="#" data-filter=".threads" class="my-1">Twitter threads</a>
-                                </li>
-                                <li class="list-inline-item">
-                                    <a href="#" data-filter=".others" class="my-1">Other</a>
-                                </li>
-                            </ul>
-                        </div>                        
-                        <div class="portfolio-items mt-4 row">
-                            <div class="col-lg-4 portfolio-item my-3 web3projects">
-                                <div class="portfolio-item-content other">
-                                    <img src="img/portfolio/nftgame.png" alt="/">
-                                    <div class="img-overlay text-center">
-                                        <div class="img-overlay-content">
-                                            <div class="portfolio-icon">
-                                                    <a href="https://nft-game-starter-project.vikingpr.repl.co/" target="_blank" class="lni-link"></a>
-                                            </div>
-                                            <h5 class="text-white mt-3 mb-0">Ethereum Slayer, An NFT Game</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 portfolio-item my-3 hackathon">
-                                <div class="portfolio-item-content other">
-                                    <img src="img/portfolio/bytehash.png" alt="/">
-                                    <div class="img-overlay text-center">
-                                        <div class="img-overlay-content">
-                                            <div class="portfolio-icon">
-                                                    <a href="https://bytehash.tech/" target="_blank" class="lni-link"></a>
-                                            </div>
-                                            <h5 class="text-white mt-3 mb-0">Smart Contract interaction tool</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 portfolio-item my-3 hackathon">
-                                <div class="portfolio-item-content other">
-                                    <img src="img/portfolio/roadtoweb3hack.png" alt="/">
-                                    <div class="img-overlay text-center">
-                                        <div class="img-overlay-content">
-                                            <div class="portfolio-icon">
-                                                    <a href="https://showcase.ethglobal.com/roadtoweb3/beyond-meta-one-wallet" target="_blank" class="lni-link"></a>
-                                            </div>
-                                            <h5 class="text-white mt-3 mb-0">ETHGlobal Hackathon</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 portfolio-item my-3 web3projects">
-                                <div class="portfolio-item-content other">
-                                    <img src="img/portfolio/onchainNFT.png" alt="/">
-                                    <div class="img-overlay text-center">
-                                        <div class="img-overlay-content">
-                                            <div class="portfolio-icon">
-                                                    <a href="https://nft-starter-project.vikingpr.repl.co/" target="_blank" class="lni-link"></a>
-                                            </div>
-                                            <h5 class="text-white mt-3 mb-0">Mint and SVG onchain NFT</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 portfolio-item my-3 articles">
-                                <div class="portfolio-item-content other">
-                                    <img src="img/portfolio/21dols.png" alt="/">
-                                    <div class="img-overlay text-center">
-                                        <div class="img-overlay-content">
-                                            <div class="portfolio-icon">
-                                                    <a href="https://blog.praneethreddy.me/21-days-of-learn-and-share-21dols" target="_blank" class="lni-link"></a>
-                                            </div>
-                                            <h5 class="text-white mt-3 mb-0">21 Days Of Learn and Share</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 portfolio-item my-3 web3projects">
-                                <div class="portfolio-item-content other">
-                                    <img src="img/portfolio/waveportal.png" alt="/">
-                                    <div class="img-overlay text-center">
-                                        <div class="img-overlay-content">
-                                            <div class="portfolio-icon">
-                                                    <a href="https://waveportal-starter-project.vikingpr.repl.co/" target="_blank" class="lni-link"></a>
-                                            </div>
-                                            <h5 class="text-white mt-3 mb-0">Waveportal on Rinkeby</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 portfolio-item my-3 articles">
-                                <div class="portfolio-item-content other">
-                                    <img src="img/portfolio/roadmap.gif" alt="/">
-                                    <div class="img-overlay text-center">
-                                        <div class="img-overlay-content">
-                                            <div class="portfolio-icon">
-                                                    <a href="https://blog.praneethreddy.me/ultimate-roadmap-for-web3-developers-from-zero-to-master" target="_blank" class="lni-link"></a>
-                                            </div>
-                                            <h5 class="text-white mt-3 mb-0">Roadmap for WEB3 Dev</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 portfolio-item my-3 web3projects">
-                                <div class="portfolio-item-content other">
-                                    <img src="img/portfolio/gifportal.png" alt="/">
-                                    <div class="img-overlay text-center">
-                                        <div class="img-overlay-content">
-                                            <div class="portfolio-icon">
-                                                    <a href="https://gif-portal-starter-project.vikingpr.repl.co/" target="_blank" class="lni-link"></a>
-                                            </div>
-                                            <h5 class="text-white mt-3 mb-0">Gif portal on Solana Devnet</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 portfolio-item my-3 web3projects">
-                                <div class="portfolio-item-content other">
-                                    <img src="img/portfolio/patchwork.png" alt="/">
-                                    <div class="img-overlay text-center">
-                                        <div class="img-overlay-content">
-                                            <div class="portfolio-icon">
-                                                    <a href="https://patchwork-kingdoms.com" target="_blank" class="lni-link"></a>
-                                            </div>
-                                            <h5 class="text-white mt-3 mb-0">Freelancing</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 portfolio-item my-3 web3projects">
-                                <div class="portfolio-item-content other">
-                                    <img src="img/portfolio/tokensniffer.png" alt="/">
-                                    <div class="img-overlay text-center">
-                                        <div class="img-overlay-content">
-                                            <div class="portfolio-icon">
-                                                    <a href="https://tokensniffer.com" target="_blank" class="lni-link"></a>
-                                            </div>
-                                            <h5 class="text-white mt-3 mb-0">Freelancing</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 portfolio-item my-3 threads">
-                                <div class="portfolio-item-content other">
-                                    <img src="img/portfolio/threads.png" alt="/">
-                                    <div class="img-overlay text-center">
-                                        <div class="img-overlay-content">
-                                            <div class="portfolio-icon">
-                                                    <a href="https://github.com/0xViking/21DaysOfLearnandShare#readme" target="_blank" class="lni-link"></a>
-                                            </div>
-                                            <h5 class="text-white mt-3 mb-0">Thread on basic web3 topics</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 portfolio-item my-3 others">
-                                <div class="portfolio-item-content other">
-                                    <img src="img/portfolio/echoes.png" alt="/">
-                                    <div class="img-overlay text-center">
-                                        <div class="img-overlay-content">
-                                            <div class="portfolio-icon">
-                                                    <a href="https://polimi-game-collective.itch.io/echoes-of-syn" target="_blank" class="lni-link"></a>
-                                            </div>
-                                            <h5 class="text-white mt-3 mb-0">Echoes of Syn UNITY Game</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>               
-                            
-                           <!--Template
-                            <div class="col-lg-4 portfolio-item my-3 FILTERS">
-                                <div class="portfolio-item-content rounded">
-                                    <img src="img/portfolio/image" alt="/">
-                                    <div class="img-overlay text-center">
-                                        <div class="img-overlay-content">
-                                            <div class="portfolio-icon">
-                                                    <a href="https://www.google.com/" target="_blank" class="lni-link"></a>
-                                            </div>
-                                            <h5 class="text-white mt-3 mb-0">Title</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--   Portfolio End   -->
-
-        <!--   Contact Start   -->
-        <section id="contact" class="section pp-scrollable contact bg-dark" data-navigation-color="#fff" data-navigation-tooltip="CONTACT">
-            <div class="display-table">
-                <div class="display-content">
-                    <div class="container">
-                        <div class="row">
-                            <div class="title-small">
-                                <p class="text-dark">Get in Touch</p>
-                            </div>
-                            <div class="col-lg-12">
-                                <div class="text-left">
-                                    <h2 class="text-dark">Get <span class="base-color">In Touch</span></h2>
-                                    <p class="text-muted mx-auto section-subtitle mt-3">Follow me on twitter for more about web3 stuff and feel free to send me an email if required!</p>
-                                    <a href="mailto:praneeth6226@gmail.com" class="pill-button mt-3 mb-lg-0">Email Me</a>
-                                    </br>
-                                </div>
-                            </div>
-                        </div>
-
-                            <div class="col-lg-6 text-left">
-                                </br>
-                                    <h6 class="font-weight-semibold">Want to follow me? </h6>
-
-                                    <ul class="list-inline socails">
-                                        <li class="list-inline-item"><a href="https://twitter.com/0xViking" target = "_blank"><i class="lni-twitter-filled text-dark"></i></a></li>
-                                        <li class="list-inline-item"><a href="https://github.com/0xViking/" target = "_blank"><i class="lni-github-original text-dark"></i></a></li>
-                                        <li class="list-inline-item"><a href="https://www.linkedin.com/in/praneethreddyarikatla" target = "_blank"><i class="lni-linkedin-original text-dark"></i></a></li>
-                                        <li class="list-inline-item"><a href="https://hashnode.com/@0xViking" target = "_blank"><i class="lni-blogger text-dark"></i></a></li>
-                                    </ul>
-
-                            </div>
-                            <br/>
-                            <div class="col-lg-6 text-left">
-                                <!-- <h6 class="font-weight-semibold">Send me an email! </h6> -->
-                                <!-- <a href="mailto:praneeth6226@gmail.com" class="pill-button mt-3 mb-lg-0">Email Me</a> -->
-                            </div>
-
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--   Contact End   -->
-
-        <!--   Color Scheme  -->
-        <a class="color-scheme text-white bg-base-color d-inline-block" href="javascript:void(0)"><i class="lni-sun"></i></a>
-
+      <div class="scroll-hint">scroll</div>
     </div>
-    <!--  Page Pilling  End -->
+  </section>
 
+  <!-- Marquee -->
+  <div class="marquee">
+    <div class="marquee-track">
+      <span>Blockchain Compliance<span class="star">✦</span></span>
+      <span>DeFi Protocols<span class="star">✦</span></span>
+      <span>Real-time Analytics<span class="star">✦</span></span>
+      <span>On-chain Monitoring<span class="star">✦</span></span>
+      <span>Smart Contract Tooling<span class="star">✦</span></span>
+      <span>Payments Infrastructure<span class="star">✦</span></span>
+      <span>Blockchain Compliance<span class="star">✦</span></span>
+      <span>DeFi Protocols<span class="star">✦</span></span>
+      <span>Real-time Analytics<span class="star">✦</span></span>
+      <span>On-chain Monitoring<span class="star">✦</span></span>
+      <span>Smart Contract Tooling<span class="star">✦</span></span>
+      <span>Payments Infrastructure<span class="star">✦</span></span>
+    </div>
+  </div>
 
-    <!--  JavaScripts  -->
-    <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="js/jquery-3.4.1.min.js"></script>
-    <!--  Plugins JS  -->
-    <script src="js/plugins.js"></script>
-    <!-- Map Js -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBcmB207_E3E4SkA8jTA8FQjSWTop9YxZU"></script>
-    <!--  Custom JS  -->
-    <script src="js/nill.js"></script>
-    </body>
+  <!-- About -->
+  <section id="about" class="manifesto">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">01 — Approach</span>
+          <h2 style="margin-top:18px">A note on how I build.</h2>
+        </div>
+        <div class="meta-col">
+          Strategic problem-solver. Spec-driven development.<br/>
+          Secure, transparent, regulatory-compliant ecosystems.
+        </div>
+      </div>
 
+      <p class="manifesto-content" id="manifesto-text">
+        I architect <em class="serif-it">high-performance, full-stack systems</em> that sit at the
+        intersection of <em class="serif-it">blockchain compliance</em>, <em class="serif-it">DeFi protocols</em>
+        and real-time data analytics — scalable microservices on Kubernetes, complex Snowflake pipelines,
+        Kafka-orchestrated event streams, and AI-augmented workflows that consistently deliver
+        <em class="serif-it">3×–5×</em> productivity gains.
+      </p>
+
+      <div class="stats">
+        <div class="stat"><div class="v"><span class="it">8+</span></div><div class="l">years building production systems across full-stack, blockchain & DevOps</div></div>
+        <div class="stat"><div class="v">15+</div><div class="l">front-end games shipped at Ivy with 20% load-time improvement</div></div>
+        <div class="stat"><div class="v"><span class="it">$11K</span></div><div class="l">awarded at web3con — 2nd place + Best dApp on Polygon</div></div>
+        <div class="stat"><div class="v">∞</div><div class="l">curiosity, plus an ISB Tech Entrepreneurship and TU Berlin stamp</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience timeline -->
+  <section id="work">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">02 — Experience</span>
+          <h2 style="margin-top:18px">Eight years, one through-line:<br/><span class="serif-it" style="color:var(--coral)">make complex systems trustable.</span></h2>
+        </div>
+        <div class="meta-col">
+          Hyderabad / Berlin / Remote<br/>
+          Open to senior staff & founding engineer roles
+        </div>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-side">
+          <div class="now"><span class="dot"></span>Currently shipping</div>
+          DeFi compliance R&amp;D for NYDFS, CCTP V2 on Solana, watchlist orchestration, TokenSniffer analytics.
+        </div>
+
+        <div class="timeline-list">
+          <div class="tl-item">
+            <div class="year">2022 — now</div>
+            <div class="body">
+              <h3>DeFi Solutions Developer <span class="at">@ Solidus Labs</span></h3>
+              <p>R&amp;D compliance solutions for premier clients including NYDFS. Architected an end-to-end on-chain monitoring system for <strong>Circle (USDC)</strong> integrating CCTP V2 and Solana ingestion pipelines. Scaled Python &amp; Go microservices on Kubernetes, orchestrated Snowflake transformations, and led the TokenSniffer UI redesign in React + Tailwind.</p>
+              <div class="tags">
+                <span>Python</span><span>Go</span><span>FastAPI</span><span>Kubernetes</span><span>Web3.py</span><span>Kafka</span><span>Snowflake</span><span>Elasticsearch</span><span>React</span>
+              </div>
+            </div>
+            <div class="role">Senior · Remote</div>
+          </div>
+
+          <div class="tl-item">
+            <div class="year">2022 — now</div>
+            <div class="body">
+              <h3>Founder &amp; Developer <span class="at">@ ByteHash Labs</span></h3>
+              <p>Chain-agnostic tooling for unit-testing and interacting with smart contracts. Won 2nd place ($10K) and Best dApp on Polygon ($1K) at the Developer DAO web3con hackathon.</p>
+              <div class="tags"><span>React</span><span>Ethers.js</span><span>Tailwind</span><span>Multi-chain</span></div>
+            </div>
+            <div class="role">Founder</div>
+          </div>
+
+          <div class="tl-item">
+            <div class="year">2021 — 2022</div>
+            <div class="body">
+              <h3>Freelance Developer <span class="at">@ TokenSniffer</span></h3>
+              <p>Crypto-flow tracking and automated audit-style analytics for scam-contract detection.</p>
+              <div class="tags"><span>JavaScript</span><span>Moralis API</span></div>
+            </div>
+            <div class="role">Freelance</div>
+          </div>
+
+          <div class="tl-item">
+            <div class="year">2021 — 2022</div>
+            <div class="body">
+              <h3>Freelance Developer <span class="at">@ Patchwork Kingdoms</span></h3>
+              <p>NFT project raising funds for UNICEF to bring schools online worldwide.</p>
+              <div class="tags"><span>React</span><span>Tailwind UI</span><span>Covalent API</span></div>
+            </div>
+            <div class="role">Freelance</div>
+          </div>
+
+          <div class="tl-item">
+            <div class="year">2018 — 2020</div>
+            <div class="body">
+              <h3>Software Engineer <span class="at">@ Ivy Software</span></h3>
+              <p>Delivered 15+ front-end casino slot games on schedule. Optimized asset loading and rendering for a 20% load-time improvement; built cross-browser, responsive experiences.</p>
+              <div class="tags"><span>JavaScript</span><span>PixiJS</span><span>TweenMax</span><span>Howler</span></div>
+            </div>
+            <div class="role">SDE</div>
+          </div>
+
+          <div class="tl-item">
+            <div class="year">2017 — 2018</div>
+            <div class="body">
+              <h3>DevOps Associate <span class="at">@ Ivy Software</span></h3>
+              <p>Internal reporting, production monitoring, and deployment of Kibana / Elasticsearch / Grafana stacks for uptime &amp; performance.</p>
+              <div class="tags"><span>Kibana</span><span>Elasticsearch</span><span>Grafana</span><span>Core Java</span><span>PL/SQL</span></div>
+            </div>
+            <div class="role">DevOps</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS — pinned scroll -->
+  <section id="projects" class="projects-pin">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">03 — Selected work</span>
+          <h2 style="margin-top:18px">Six projects, one obsession:<br/><span class="serif-it" style="color:var(--coral)">elegant tools for hard problems.</span></h2>
+        </div>
+        <div class="meta-col">
+          Founder &amp; lead engineer on the products below.<br/>
+          Production traffic · live links · all shipped.
+        </div>
+      </div>
+
+      <div class="projects-track">
+
+        <!-- ByteHash -->
+        <article class="project">
+          <div class="project-info">
+            <div class="num">Project 01 — Smart Contract Toolkit</div>
+            <h3>ByteHash <span class="it">Labs</span></h3>
+            <div class="domain">↳ bytehashlabs.com</div>
+            <p class="desc">A chain-agnostic developer tool to unit-test and interact with smart contracts without leaving the browser. Award-winning at the Developer DAO web3con hackathon — 2nd overall, Best dApp on Polygon.</p>
+            <ul class="features">
+              <li>One UI for Ethereum, Polygon, BSC and most EVM chains.</li>
+              <li>Etherscan / Polygonscan / BSCScan API integration for verified ABIs.</li>
+              <li>Inline testing harness with state inspection and gas profiling.</li>
+            </ul>
+            <div class="stack"><span>React</span><span>Ethers.js</span><span>jQuery</span><span>Tailwind</span><span>Etherscan API</span></div>
+            <a href="https://bytehashlabs.com" target="_blank" rel="noopener" class="visit" data-hover>Visit bytehashlabs.com <span>↗</span></a>
+          </div>
+          <div class="project-visual v-bytehash" data-tilt>
+            <svg class="deco" viewBox="0 0 400 500" preserveAspectRatio="none">
+              <defs>
+                <linearGradient id="bh-g" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#a18bd5" stop-opacity=".5"/>
+                  <stop offset="1" stop-color="#e26a4a" stop-opacity=".25"/>
+                </linearGradient>
+              </defs>
+              <g stroke="rgba(241,234,216,.18)" stroke-width="1" fill="none">
+                <path d="M50 250 Q200 50 350 250 T50 250"/>
+                <path d="M50 280 Q200 80 350 280 T50 280"/>
+                <path d="M50 310 Q200 110 350 310 T50 310"/>
+              </g>
+              <circle cx="200" cy="250" r="120" fill="url(#bh-g)"/>
+              <g font-family="JetBrains Mono, monospace" font-size="10" fill="rgba(241,234,216,.5)">
+                <text x="50" y="60">0x4a8e...c1f7</text>
+                <text x="240" y="430">contract.test()</text>
+              </g>
+            </svg>
+            <div class="glyph">⟨/⟩</div>
+            <div class="floating" style="top:18%;left:8%">awarded · web3con</div>
+            <div class="floating" style="top:42%;right:10%">$11,000 prize</div>
+            <div class="floating" style="bottom:24%;left:14%">chain-agnostic</div>
+            <div class="corner-top">02 / 06<br/>2022 — now</div>
+            <div class="corner">bytehashlabs</div>
+          </div>
+        </article>
+
+        <!-- Orbit UPI -->
+        <article class="project">
+          <div class="project-visual v-orbit" data-tilt>
+            <svg class="deco" viewBox="0 0 400 500" preserveAspectRatio="none">
+              <g fill="none" stroke="rgba(22,19,16,.18)" stroke-width="1">
+                <ellipse cx="200" cy="250" rx="160" ry="60"/>
+                <ellipse cx="200" cy="250" rx="160" ry="60" transform="rotate(60 200 250)"/>
+                <ellipse cx="200" cy="250" rx="160" ry="60" transform="rotate(120 200 250)"/>
+              </g>
+              <circle cx="200" cy="250" r="44" fill="#161310"/>
+              <circle cx="360" cy="250" r="6" fill="#e26a4a"/>
+              <circle cx="120" cy="170" r="5" fill="#161310"/>
+              <circle cx="280" cy="340" r="5" fill="#161310"/>
+            </svg>
+            <div class="glyph">◐</div>
+            <div class="floating" style="top:16%;left:8%">UPI · cards · forex</div>
+            <div class="floating" style="bottom:30%;right:8%">consumer payments</div>
+            <div class="corner-top">02 / 06<br/>2024</div>
+            <div class="corner">orbit</div>
+          </div>
+          <div class="project-info">
+            <div class="num">Project 02 — Payments Orbit</div>
+            <h3>Orbit <span class="it">UPI</span></h3>
+            <div class="domain">↳ orbitupi.com</div>
+            <p class="desc">A clean, opinionated lens on India's payments ecosystem — UPI rails, card schemes and consumer flows visualised for makers, founders and curious operators.</p>
+            <ul class="features">
+              <li>Live UPI volumes, app share and bank-level breakdowns.</li>
+              <li>Searchable directories with deep-linkable cards.</li>
+              <li>Designed for keyboard-first exploration and weekend reading.</li>
+            </ul>
+            <div class="stack"><span>Next.js</span><span>TypeScript</span><span>Tailwind</span><span>Postgres</span><span>NPCI sources</span></div>
+            <a href="https://orbitupi.com" target="_blank" rel="noopener" class="visit" data-hover>Visit orbitupi.com <span>↗</span></a>
+          </div>
+        </article>
+
+        <!-- BharatPay Index -->
+        <article class="project">
+          <div class="project-info">
+            <div class="num">Project 03 — Payments Intelligence</div>
+            <h3>BharatPay <span class="it">Index</span></h3>
+            <div class="domain">↳ bharatpayindex.com</div>
+            <p class="desc">A daily-updated index of India's digital-payments health — UPI throughput, success rates, app concentration and regulator signals — distilled into a single readable dashboard.</p>
+            <ul class="features">
+              <li>Multi-source ingestion (RBI, NPCI, public filings) normalised into a single schema.</li>
+              <li>Composable charts with downloadable CSVs for analysts.</li>
+              <li>Weekly narrative explainers paired with raw data.</li>
+            </ul>
+            <div class="stack"><span>Next.js</span><span>D3</span><span>Python</span><span>Snowflake</span><span>Cloudflare</span></div>
+            <a href="https://bharatpayindex.com" target="_blank" rel="noopener" class="visit" data-hover>Visit bharatpayindex.com <span>↗</span></a>
+          </div>
+          <div class="project-visual v-bharat" data-tilt>
+            <svg class="deco" viewBox="0 0 400 500" preserveAspectRatio="none">
+              <g stroke="rgba(22,19,16,.25)" stroke-width="1" fill="none">
+                <path d="M30 380 L80 330 L130 350 L180 280 L230 290 L280 220 L330 240 L380 170"/>
+                <path d="M30 400 L80 370 L130 390 L180 340 L230 330 L280 290 L330 270 L380 250" stroke="rgba(226,106,74,.55)"/>
+              </g>
+              <g fill="rgba(22,19,16,.4)" font-family="JetBrains Mono, monospace" font-size="9">
+                <text x="30" y="50">UPI · 24h</text>
+                <text x="30" y="64">+ 3.4%</text>
+              </g>
+              <g>
+                <rect x="280" y="60" width="90" height="32" rx="16" fill="rgba(255,255,255,.6)" stroke="rgba(22,19,16,.15)"/>
+                <text x="296" y="80" font-family="JetBrains Mono, monospace" font-size="10" fill="#161310">▲ live feed</text>
+              </g>
+            </svg>
+            <div class="glyph">₹</div>
+            <div class="floating" style="top:16%;right:10%">daily index</div>
+            <div class="floating" style="bottom:26%;left:8%">RBI · NPCI sources</div>
+            <div class="corner-top">03 / 06<br/>2025</div>
+            <div class="corner">bharatpay·index</div>
+          </div>
+        </article>
+
+        <!-- Circle / Solidus -->
+        <article class="project">
+          <div class="project-visual v-circle" data-tilt>
+            <svg class="deco" viewBox="0 0 400 500" preserveAspectRatio="none">
+              <g fill="none" stroke="rgba(255,255,255,.4)" stroke-width="1">
+                <circle cx="200" cy="250" r="160"/>
+                <circle cx="200" cy="250" r="120"/>
+                <circle cx="200" cy="250" r="80"/>
+                <circle cx="200" cy="250" r="40"/>
+              </g>
+              <g fill="#fff">
+                <circle cx="200" cy="90" r="6"/>
+                <circle cx="360" cy="250" r="6"/>
+                <circle cx="200" cy="410" r="6"/>
+                <circle cx="40" cy="250" r="6"/>
+              </g>
+              <g stroke="rgba(255,255,255,.6)" stroke-dasharray="3 4" fill="none">
+                <path d="M200 90 L360 250 L200 410 L40 250 Z"/>
+              </g>
+            </svg>
+            <div class="glyph">◎</div>
+            <div class="floating" style="top:16%;left:10%">CCTP v2</div>
+            <div class="floating" style="bottom:26%;right:8%">Solana ingest</div>
+            <div class="floating" style="top:48%;left:6%">USDC</div>
+            <div class="corner-top">04 / 06<br/>solidus · 2024</div>
+            <div class="corner">circle · monitoring</div>
+          </div>
+          <div class="project-info">
+            <div class="num">Project 04 — On-chain Monitoring</div>
+            <h3>Circle <span class="it">(USDC)</span> Monitor</h3>
+            <div class="domain">↳ at solidus labs · for NYDFS-class clients</div>
+            <p class="desc">An end-to-end on-chain monitoring system for Circle that integrates CCTP V2 transfers and optimises Solana ingestion for transparency at scale. Production-grade pipelines feeding global compliance teams.</p>
+            <ul class="features">
+              <li>Real-time normalisation, deduplication and Forta-feed flagging.</li>
+              <li>Kibana &amp; Retool dashboards for webhooks and TokenSniffer analytics.</li>
+              <li>Snowflake views &amp; jobs powering downstream regulator reports.</li>
+            </ul>
+            <div class="stack"><span>Python</span><span>Go</span><span>Web3.py</span><span>Kafka</span><span>Snowflake</span><span>Kubernetes</span><span>Elasticsearch</span></div>
+          </div>
+        </article>
+
+        <!-- TokenSniffer -->
+        <article class="project">
+          <div class="project-info">
+            <div class="num">Project 05 — Scam Detection</div>
+            <h3>Token<span class="it">Sniffer</span></h3>
+            <div class="domain">↳ tokensniffer.com</div>
+            <p class="desc">Crypto-flow tracking and automated, audit-style analytics that flag scam contracts at scale. Contributed early features and later led the React + Tailwind landing-page redesign.</p>
+            <ul class="features">
+              <li>Heuristics + Moralis-API-driven flow tracing.</li>
+              <li>Redesigned landing &amp; product surfaces for clarity.</li>
+            </ul>
+            <div class="stack"><span>JavaScript</span><span>React</span><span>Tailwind</span><span>Moralis API</span></div>
+            <a href="https://tokensniffer.com" target="_blank" rel="noopener" class="visit" data-hover>Visit tokensniffer.com <span>↗</span></a>
+          </div>
+          <div class="project-visual v-token" data-tilt>
+            <svg class="deco" viewBox="0 0 400 500" preserveAspectRatio="none">
+              <g fill="none" stroke="rgba(22,19,16,.2)" stroke-width="1">
+                <path d="M40 250 Q200 80 360 250"/>
+                <path d="M40 250 Q200 420 360 250"/>
+              </g>
+              <circle cx="200" cy="250" r="70" fill="none" stroke="rgba(226,106,74,.7)" stroke-width="2"/>
+              <circle cx="200" cy="250" r="100" fill="none" stroke="rgba(22,19,16,.18)" stroke-dasharray="4 6"/>
+              <g font-family="JetBrains Mono, monospace" font-size="9" fill="rgba(22,19,16,.5)">
+                <text x="40" y="60">risk · 92%</text>
+                <text x="280" y="440">flagged</text>
+              </g>
+            </svg>
+            <div class="glyph">⊙</div>
+            <div class="floating" style="top:14%;left:10%">flow tracing</div>
+            <div class="floating" style="bottom:30%;right:8%">audit analytics</div>
+            <div class="corner-top">05 / 06<br/>2021 — 2022</div>
+            <div class="corner">tokensniffer</div>
+          </div>
+        </article>
+
+        <!-- Patchwork Kingdoms -->
+        <article class="project">
+          <div class="project-visual v-patch" data-tilt>
+            <svg class="deco" viewBox="0 0 400 500" preserveAspectRatio="none">
+              <g fill="rgba(22,19,16,.12)">
+                <rect x="60" y="120" width="60" height="60" rx="6" transform="rotate(8 90 150)"/>
+                <rect x="160" y="80" width="60" height="60" rx="6" transform="rotate(-6 190 110)"/>
+                <rect x="260" y="140" width="60" height="60" rx="6" transform="rotate(12 290 170)"/>
+                <rect x="100" y="240" width="60" height="60" rx="6" transform="rotate(-4 130 270)"/>
+                <rect x="220" y="260" width="60" height="60" rx="6" transform="rotate(10 250 290)"/>
+                <rect x="150" y="360" width="60" height="60" rx="6" transform="rotate(-8 180 390)"/>
+              </g>
+              <g fill="rgba(226,106,74,.35)">
+                <rect x="190" y="190" width="60" height="60" rx="6" transform="rotate(6 220 220)"/>
+              </g>
+            </svg>
+            <div class="glyph">♥</div>
+            <div class="floating" style="top:16%;left:8%">for UNICEF</div>
+            <div class="floating" style="bottom:24%;right:8%">schools online</div>
+            <div class="corner-top">06 / 06<br/>2021 — 2022</div>
+            <div class="corner">patchwork·kingdoms</div>
+          </div>
+          <div class="project-info">
+            <div class="num">Project 06 — NFTs for good</div>
+            <h3>Patchwork <span class="it">Kingdoms</span></h3>
+            <div class="domain">↳ patchwork-kingdoms.com</div>
+            <p class="desc">An NFT project raising funds for UNICEF to bring schools online worldwide. Contributed front-end and on-chain data tooling.</p>
+            <ul class="features">
+              <li>React + Tailwind UI; Covalent-API powered collection state.</li>
+              <li>Mission-driven Web3 — proof that beauty and good can ship together.</li>
+            </ul>
+            <div class="stack"><span>React</span><span>Tailwind UI</span><span>Tailwind CSS</span><span>Covalent API</span></div>
+            <a href="https://patchwork-kingdoms.com" target="_blank" rel="noopener" class="visit" data-hover>Visit patchwork-kingdoms.com <span>↗</span></a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Stack -->
+  <section id="stack" class="stack-section">
+    <div class="wrap">
+      <span class="eyebrow">04 — Stack</span>
+      <h3 style="margin-top:18px">Tools I reach for when the deadline is real and the data is <span class="it">larger than it should be.</span></h3>
+
+      <div class="ticker-row">
+        <div class="track">
+          <span class="chip"><span class="d"></span>Python</span>
+          <span class="chip"><span class="d"></span>Go</span>
+          <span class="chip"><span class="d"></span>FastAPI</span>
+          <span class="chip"><span class="d"></span>Kubernetes</span>
+          <span class="chip"><span class="d"></span>Docker</span>
+          <span class="chip"><span class="d"></span>Kafka</span>
+          <span class="chip"><span class="d"></span>Redis</span>
+          <span class="chip"><span class="d"></span>Snowflake</span>
+          <span class="chip"><span class="d"></span>AWS</span>
+          <span class="chip"><span class="d"></span>Elasticsearch</span>
+          <span class="chip"><span class="d"></span>logz.io</span>
+          <span class="chip"><span class="d"></span>Web3.py</span>
+          <!-- duplicate for seamless loop -->
+          <span class="chip"><span class="d"></span>Python</span>
+          <span class="chip"><span class="d"></span>Go</span>
+          <span class="chip"><span class="d"></span>FastAPI</span>
+          <span class="chip"><span class="d"></span>Kubernetes</span>
+          <span class="chip"><span class="d"></span>Docker</span>
+          <span class="chip"><span class="d"></span>Kafka</span>
+          <span class="chip"><span class="d"></span>Redis</span>
+          <span class="chip"><span class="d"></span>Snowflake</span>
+          <span class="chip"><span class="d"></span>AWS</span>
+          <span class="chip"><span class="d"></span>Elasticsearch</span>
+          <span class="chip"><span class="d"></span>logz.io</span>
+          <span class="chip"><span class="d"></span>Web3.py</span>
+        </div>
+      </div>
+
+      <div class="ticker-row reverse">
+        <div class="track">
+          <span class="chip"><span class="d"></span>React</span>
+          <span class="chip"><span class="d"></span>TypeScript</span>
+          <span class="chip"><span class="d"></span>Tailwind CSS</span>
+          <span class="chip"><span class="d"></span>Next.js</span>
+          <span class="chip"><span class="d"></span>Ethers.js</span>
+          <span class="chip"><span class="d"></span>Hardhat</span>
+          <span class="chip"><span class="d"></span>Solana</span>
+          <span class="chip"><span class="d"></span>Ethereum</span>
+          <span class="chip"><span class="d"></span>Polygon</span>
+          <span class="chip"><span class="d"></span>Chainlink</span>
+          <span class="chip"><span class="d"></span>IPFS</span>
+          <span class="chip"><span class="d"></span>Retool</span>
+          <span class="chip"><span class="d"></span>Kibana</span>
+          <!-- dup -->
+          <span class="chip"><span class="d"></span>React</span>
+          <span class="chip"><span class="d"></span>TypeScript</span>
+          <span class="chip"><span class="d"></span>Tailwind CSS</span>
+          <span class="chip"><span class="d"></span>Next.js</span>
+          <span class="chip"><span class="d"></span>Ethers.js</span>
+          <span class="chip"><span class="d"></span>Hardhat</span>
+          <span class="chip"><span class="d"></span>Solana</span>
+          <span class="chip"><span class="d"></span>Ethereum</span>
+          <span class="chip"><span class="d"></span>Polygon</span>
+          <span class="chip"><span class="d"></span>Chainlink</span>
+          <span class="chip"><span class="d"></span>IPFS</span>
+          <span class="chip"><span class="d"></span>Retool</span>
+          <span class="chip"><span class="d"></span>Kibana</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA / Contact -->
+  <section id="contact" class="cta-section">
+    <div class="wrap">
+      <div class="cta-card">
+        <div class="cta-glow"></div>
+        <span class="eyebrow" style="color:rgba(243,236,221,.6)">05 — Let's talk</span>
+        <h2 style="margin-top:18px">Got a system that needs to be <span class="it">trustable</span> — or a product you want shipped?</h2>
+        <p class="sub">I take on a small number of consults and select staff/founding roles per year. Compliance, DeFi infrastructure, payments-grade analytics, and developer tooling are home turf.</p>
+        <div class="links">
+          <a class="primary" href="mailto:praneeth6226@gmail.com" data-hover>praneeth6226@gmail.com <span>↗</span></a>
+          <a href="Praneeth_Reddy_Arikatla_Resume_2026.pdf" target="_blank" rel="noopener" data-hover>Résumé · PDF <span>↓</span></a>
+          <a href="Praneeth_Reddy_Arikatla_Resume_2026.docx" target="_blank" rel="noopener" data-hover>Résumé · DOCX <span>↓</span></a>
+          <a href="https://github.com/0xViking" target="_blank" rel="noopener" data-hover>GitHub <span>↗</span></a>
+          <a href="https://linkedin.com/in/praneethreddyarikatla" target="_blank" rel="noopener" data-hover>LinkedIn <span>↗</span></a>
+          <a href="https://twitter.com/0xViking" target="_blank" rel="noopener" data-hover>Twitter <span>↗</span></a>
+          <a href="https://blog.praneethreddy.me" target="_blank" rel="noopener" data-hover>Blog <span>↗</span></a>
+        </div>
+
+        <div class="info-grid">
+          <div><div class="it-l">Based</div><div class="it-v">Hyderabad, India</div></div>
+          <div><div class="it-l">Currently</div><div class="it-v">Solidus Labs · Senior</div></div>
+          <div><div class="it-l">Availability</div><div class="it-v">Select consults, 2026</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap" style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;width:100%">
+      <div class="left">© 2026 · Praneeth Reddy Arikatla · Crafted in Hyderabad</div>
+      <div class="right"><a href="https://github.com/0xViking/0xViking.github.io" target="_blank" rel="noopener">source ↗</a></div>
+    </div>
+  </footer>
+
+</main>
+
+<!-- Libraries -->
+<script src="https://cdn.jsdelivr.net/npm/three@0.158.0/build/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+
+<script>
+/* ---------- Loader ---------- */
+window.addEventListener('load', () => {
+  setTimeout(() => document.getElementById('loader').classList.add('hidden'), 900);
+});
+
+/* ---------- Lenis smooth scroll ---------- */
+const lenis = new Lenis({
+  duration: 1.15,
+  easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+  smoothWheel: true,
+  smoothTouch: false
+});
+function raf(time){ lenis.raf(time); requestAnimationFrame(raf); }
+requestAnimationFrame(raf);
+
+/* GSAP <-> Lenis bridge */
+gsap.registerPlugin(ScrollTrigger);
+lenis.on('scroll', ScrollTrigger.update);
+gsap.ticker.add(t => lenis.raf(t * 1000));
+gsap.ticker.lagSmoothing(0);
+
+/* Anchor links with Lenis */
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const h = a.getAttribute('href');
+    if (h.length > 1) {
+      e.preventDefault();
+      const tgt = document.querySelector(h);
+      if (tgt) lenis.scrollTo(tgt, { offset: -20, duration: 1.3 });
+    }
+  });
+});
+
+/* ---------- Nav scroll state ---------- */
+const nav = document.getElementById('nav');
+ScrollTrigger.create({ start: 'top -40', end: 99999, toggleClass: { className: 'scrolled', targets: '#nav' } });
+
+/* ---------- Custom cursor ---------- */
+const cur = document.getElementById('cursor');
+let cx=0, cy=0, tx=0, ty=0;
+window.addEventListener('mousemove', e => { tx = e.clientX; ty = e.clientY; });
+function curLoop(){
+  cx += (tx - cx) * 0.18;
+  cy += (ty - cy) * 0.18;
+  if (cur) cur.style.transform = `translate(${cx}px, ${cy}px) translate(-50%,-50%)`;
+  requestAnimationFrame(curLoop);
+}
+curLoop();
+document.querySelectorAll('[data-hover], a, button').forEach(el => {
+  el.addEventListener('mouseenter', () => cur && cur.classList.add('hover'));
+  el.addEventListener('mouseleave', () => cur && cur.classList.remove('hover'));
+});
+
+/* ---------- Manifesto word-by-word reveal ---------- */
+const mf = document.getElementById('manifesto-text');
+if (mf) {
+  // wrap each non-tag word in a span
+  const nodes = [];
+  function walk(n){
+    if (n.nodeType === 3) nodes.push(n);
+    else if (n.nodeType === 1) for (const c of n.childNodes) walk(c);
+  }
+  walk(mf);
+  nodes.forEach(n => {
+    const parts = n.nodeValue.split(/(\s+)/);
+    const frag = document.createDocumentFragment();
+    parts.forEach(p => {
+      if (/\s+/.test(p)) frag.appendChild(document.createTextNode(p));
+      else if (p.length) {
+        const s = document.createElement('span');
+        s.className = 'word';
+        if (n.parentElement && n.parentElement.tagName === 'EM') s.classList.add('accent');
+        s.textContent = p;
+        frag.appendChild(s);
+      }
+    });
+    n.parentNode.replaceChild(frag, n);
+  });
+  const words = mf.querySelectorAll('.word');
+  ScrollTrigger.create({
+    trigger: mf,
+    start: 'top 80%',
+    end: 'bottom 40%',
+    scrub: 1,
+    onUpdate: self => {
+      const idx = Math.floor(self.progress * words.length);
+      words.forEach((w, i) => w.classList.toggle('show', i <= idx));
+    }
+  });
+}
+
+/* ---------- Project card tilt + parallax ---------- */
+document.querySelectorAll('[data-tilt]').forEach(el => {
+  let r = { x: 0, y: 0 };
+  el.addEventListener('mousemove', e => {
+    const b = el.getBoundingClientRect();
+    const px = (e.clientX - b.left) / b.width - 0.5;
+    const py = (e.clientY - b.top) / b.height - 0.5;
+    r.x = py * -8;
+    r.y = px * 8;
+    el.style.transform = `perspective(900px) rotateX(${r.x}deg) rotateY(${r.y}deg) translateZ(0)`;
+  });
+  el.addEventListener('mouseleave', () => {
+    el.style.transition = 'transform .6s cubic-bezier(.22,.61,.36,1)';
+    el.style.transform = 'perspective(900px) rotateX(0) rotateY(0)';
+    setTimeout(() => el.style.transition = '', 600);
+  });
+});
+
+/* Project text + visual fade-in */
+gsap.utils.toArray('.project').forEach(p => {
+  const info = p.querySelector('.project-info');
+  const vis = p.querySelector('.project-visual');
+  gsap.fromTo([info, vis],
+    { opacity: 0, y: 60 },
+    {
+      opacity: 1, y: 0, duration: 1.1, stagger: 0.08, ease: 'power3.out',
+      scrollTrigger: { trigger: p, start: 'top 75%' }
+    }
+  );
+  // subtle parallax on the visual
+  gsap.to(vis, {
+    yPercent: -8,
+    ease: 'none',
+    scrollTrigger: { trigger: p, start: 'top bottom', end: 'bottom top', scrub: true }
+  });
+});
+
+/* Timeline items reveal */
+gsap.utils.toArray('.tl-item').forEach(t => {
+  gsap.fromTo(t,
+    { opacity: 0, y: 30 },
+    { opacity: 1, y: 0, duration: 0.9, ease: 'power3.out',
+      scrollTrigger: { trigger: t, start: 'top 85%' } }
+  );
+});
+
+/* Stats counter */
+gsap.utils.toArray('.stat .v').forEach(v => {
+  gsap.from(v, {
+    y: 30, opacity: 0, duration: 0.9, ease: 'power3.out',
+    scrollTrigger: { trigger: v, start: 'top 85%' }
+  });
+});
+
+/* Section heads */
+gsap.utils.toArray('.section-head h2, .section-head .eyebrow, .section-head .meta-col').forEach(el => {
+  gsap.from(el, {
+    y: 30, opacity: 0, duration: 0.9, ease: 'power3.out',
+    scrollTrigger: { trigger: el, start: 'top 88%' }
+  });
+});
+
+/* ---------- THREE.js hero blob ---------- */
+(function heroBlob(){
+  const mount = document.getElementById('hero-canvas-wrap');
+  if (!mount || !window.THREE) return;
+
+  const size = () => ({ w: mount.clientWidth, h: mount.clientHeight });
+  const { w, h } = size();
+
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(45, w/h, 0.1, 100);
+  camera.position.z = 4.2;
+
+  const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+  renderer.setSize(w, h);
+  renderer.setClearColor(0x000000, 0);
+  mount.appendChild(renderer.domElement);
+
+  // gradient sphere
+  const geo = new THREE.IcosahedronGeometry(1.55, 64);
+
+  const uniforms = {
+    uTime:     { value: 0 },
+    uScroll:   { value: 0 },
+    uMouseX:   { value: 0 },
+    uMouseY:   { value: 0 },
+    uColorA:   { value: new THREE.Color('#e26a4a') },  // coral
+    uColorB:   { value: new THREE.Color('#c89a4a') },  // gold
+    uColorC:   { value: new THREE.Color('#f1ead8') },  // cream highlight
+    uColorD:   { value: new THREE.Color('#6a7a55') }   // sage shadow
+  };
+
+  const material = new THREE.ShaderMaterial({
+    uniforms,
+    vertexShader: `
+      uniform float uTime;
+      uniform float uScroll;
+      uniform float uMouseX;
+      uniform float uMouseY;
+      varying vec3 vNormal;
+      varying vec3 vPos;
+      varying float vDist;
+
+      // simplex noise (Stefan Gustavson, public domain)
+      vec3 mod289(vec3 x){return x-floor(x*(1.0/289.0))*289.0;}
+      vec4 mod289(vec4 x){return x-floor(x*(1.0/289.0))*289.0;}
+      vec4 permute(vec4 x){return mod289(((x*34.0)+1.0)*x);}
+      vec4 taylorInvSqrt(vec4 r){return 1.79284291400159-0.85373472095314*r;}
+      float snoise(vec3 v){
+        const vec2 C=vec2(1.0/6.0,1.0/3.0);
+        const vec4 D=vec4(0.0,0.5,1.0,2.0);
+        vec3 i=floor(v+dot(v,C.yyy));
+        vec3 x0=v-i+dot(i,C.xxx);
+        vec3 g=step(x0.yzx,x0.xyz);
+        vec3 l=1.0-g;
+        vec3 i1=min(g.xyz,l.zxy);
+        vec3 i2=max(g.xyz,l.zxy);
+        vec3 x1=x0-i1+C.xxx;
+        vec3 x2=x0-i2+C.yyy;
+        vec3 x3=x0-D.yyy;
+        i=mod289(i);
+        vec4 p=permute(permute(permute(
+          i.z+vec4(0.0,i1.z,i2.z,1.0))
+          +i.y+vec4(0.0,i1.y,i2.y,1.0))
+          +i.x+vec4(0.0,i1.x,i2.x,1.0));
+        float n_=0.142857142857;
+        vec3 ns=n_*D.wyz-D.xzx;
+        vec4 j=p-49.0*floor(p*ns.z*ns.z);
+        vec4 x_=floor(j*ns.z);
+        vec4 y_=floor(j-7.0*x_);
+        vec4 x=x_*ns.x+ns.yyyy;
+        vec4 y=y_*ns.x+ns.yyyy;
+        vec4 h=1.0-abs(x)-abs(y);
+        vec4 b0=vec4(x.xy,y.xy);
+        vec4 b1=vec4(x.zw,y.zw);
+        vec4 s0=floor(b0)*2.0+1.0;
+        vec4 s1=floor(b1)*2.0+1.0;
+        vec4 sh=-step(h,vec4(0.0));
+        vec4 a0=b0.xzyw+s0.xzyw*sh.xxyy;
+        vec4 a1=b1.xzyw+s1.xzyw*sh.zzww;
+        vec3 p0=vec3(a0.xy,h.x);
+        vec3 p1=vec3(a0.zw,h.y);
+        vec3 p2=vec3(a1.xy,h.z);
+        vec3 p3=vec3(a1.zw,h.w);
+        vec4 norm=taylorInvSqrt(vec4(dot(p0,p0),dot(p1,p1),dot(p2,p2),dot(p3,p3)));
+        p0*=norm.x;p1*=norm.y;p2*=norm.z;p3*=norm.w;
+        vec4 m=max(0.6-vec4(dot(x0,x0),dot(x1,x1),dot(x2,x2),dot(x3,x3)),0.0);
+        m=m*m;
+        return 42.0*dot(m*m,vec4(dot(p0,x0),dot(p1,x1),dot(p2,x2),dot(p3,x3)));
+      }
+
+      void main(){
+        vec3 pos = position;
+        float t = uTime * 0.35;
+        float scrollAmp = 0.5 + uScroll * 0.6;
+        float n = snoise(pos * 1.2 + vec3(t, t*0.7, -t*0.5));
+        float n2 = snoise(pos * 2.6 + vec3(-t*0.5, t*0.3, t));
+        float disp = n * 0.32 * scrollAmp + n2 * 0.08;
+        pos += normal * disp;
+        vNormal = normalize(normalMatrix * normal);
+        vPos = pos;
+        vDist = disp;
+        gl_Position = projectionMatrix * modelViewMatrix * vec4(pos, 1.0);
+      }
+    `,
+    fragmentShader: `
+      uniform vec3 uColorA;
+      uniform vec3 uColorB;
+      uniform vec3 uColorC;
+      uniform vec3 uColorD;
+      uniform float uTime;
+      varying vec3 vNormal;
+      varying vec3 vPos;
+      varying float vDist;
+      void main(){
+        // simple lambert-ish lighting
+        vec3 light = normalize(vec3(0.4, 0.8, 0.6));
+        float diff = max(dot(vNormal, light), 0.0);
+        float rim = pow(1.0 - max(dot(vNormal, vec3(0.0,0.0,1.0)), 0.0), 2.5);
+
+        // gradient based on position + displacement
+        float mixA = smoothstep(-0.6, 0.6, vPos.y);
+        vec3 base = mix(uColorD, uColorA, mixA);
+        base = mix(base, uColorB, smoothstep(-1.0, 1.0, vPos.x));
+        base += rim * uColorC * 0.7;
+        base += diff * 0.25;
+        // a touch of displacement-driven highlight
+        base += vec3(1.0, 0.6, 0.4) * max(vDist, 0.0) * 0.45;
+        gl_FragColor = vec4(base, 1.0);
+      }
+    `
+  });
+
+  const mesh = new THREE.Mesh(geo, material);
+  scene.add(mesh);
+
+  // floating rings
+  const rings = new THREE.Group();
+  for (let i = 0; i < 3; i++){
+    const r = new THREE.Mesh(
+      new THREE.TorusGeometry(2.1 + i*0.18, 0.005, 12, 200),
+      new THREE.MeshBasicMaterial({ color: 0x161310, transparent: true, opacity: 0.25 - i*0.06 })
+    );
+    r.rotation.x = Math.PI/2 + (i*0.18);
+    r.rotation.z = i*0.4;
+    rings.add(r);
+  }
+  scene.add(rings);
+
+  // mouse parallax
+  let mx = 0, my = 0;
+  mount.addEventListener('mousemove', e => {
+    const b = mount.getBoundingClientRect();
+    mx = ((e.clientX - b.left) / b.width - 0.5);
+    my = ((e.clientY - b.top) / b.height - 0.5);
+  });
+
+  // scroll input
+  let scrollAmt = 0;
+  ScrollTrigger.create({
+    trigger: '.hero',
+    start: 'top top',
+    end: 'bottom top',
+    scrub: true,
+    onUpdate: self => { scrollAmt = self.progress; }
+  });
+
+  const clock = new THREE.Clock();
+  function animate(){
+    const dt = clock.getDelta();
+    uniforms.uTime.value += dt;
+    uniforms.uScroll.value += (scrollAmt - uniforms.uScroll.value) * 0.08;
+    mesh.rotation.y += dt * 0.18 + scrollAmt * 0.02;
+    mesh.rotation.x += dt * 0.05;
+    mesh.position.x += (mx * 0.4 - mesh.position.x) * 0.06;
+    mesh.position.y += (-my * 0.3 - mesh.position.y) * 0.06;
+    rings.rotation.y += dt * 0.04;
+    rings.rotation.x = mesh.rotation.x * 0.4;
+    renderer.render(scene, camera);
+    requestAnimationFrame(animate);
+  }
+  animate();
+
+  function onResize(){
+    const { w, h } = size();
+    camera.aspect = w/h;
+    camera.updateProjectionMatrix();
+    renderer.setSize(w, h);
+  }
+  window.addEventListener('resize', onResize);
+})();
+
+/* Refresh ScrollTrigger once everything is laid out */
+window.addEventListener('load', () => setTimeout(() => ScrollTrigger.refresh(), 200));
+</script>
+
+</body>
 </html>
