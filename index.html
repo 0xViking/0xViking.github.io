@@ -173,6 +173,14 @@
     transition:none;
   }
   .hero-lbl-node{}
+  /* Skill chips: smaller + dimmer so they read as supporting layer behind the chain/product labels */
+  .hero-lbl-skill{
+    font-size:8.5px;padding:3px 8px;letter-spacing:.1em;
+    background:rgba(243,236,221,.78);color:var(--muted);
+    border-color:rgba(216,205,181,.6);
+    box-shadow:none;
+  }
+  .hero-lbl-skill::before{width:6px;left:-6px;opacity:.25}
   .hero-lbl-sat{background:rgba(226,106,74,.96);color:var(--cream);border-color:rgba(140,58,33,.4)}
   .hero-lbl-center{
     font-family:'Instrument Serif',serif;font-style:italic;text-transform:none;
@@ -190,8 +198,12 @@
   .hero-lbl-center::before{display:none}
   /* hide projected labels on phones; the center wordmark stays */
   @media(max-width:640px){
-    .hero-lbl-node,.hero-lbl-sat{display:none}
+    .hero-lbl-node,.hero-lbl-sat,.hero-lbl-skill{display:none}
     .hero-lbl-center{font-size:12px;padding:4px 10px}
+  }
+  /* on tablets/laptops up to ~1100px, drop the densest layer */
+  @media(max-width:1100px) and (min-width:641px){
+    .hero-lbl-skill{display:none}
   }
   .hero-labels{position:absolute;inset:0;pointer-events:none}
   .hero-labels span{position:absolute;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
@@ -1281,14 +1293,21 @@ gsap.utils.toArray('.section-head h2, .section-head .eyebrow, .section-head .met
   );
   root.add(sphereLines);
 
-  /* -- Floating node points distributed by Fibonacci spiral -- */
-  /* 24 nodes → i % 6 === 0 gives exactly 4 active (USDC / ETH / SOL / ₹·UPI),
-     mapping to the chains & rails Praneeth actually works across. */
+  /* -- Floating node points distributed by Fibonacci spiral --
+     24 nodes total: 4 active "chain" nodes (USDC / ETH / SOL / ₹·UPI),
+     20 supporting "skill" nodes labelled with the actual stack Praneeth
+     ships with — picked from the 2026 resume in priority order. */
   const NODE_COUNT = 24;
   const ACTIVE_LABELS = ['USDC', 'ETH', 'SOL', '₹·UPI'];
+  const SKILL_LABELS  = [
+    'Python', 'TypeScript', 'React', 'Next.js', 'FastAPI',
+    'Kubernetes', 'Docker', 'Kafka', 'Snowflake', 'Databricks',
+    'AWS', 'Web3.py', 'Ethers.js', 'Solidity', 'Tailwind',
+    'Claude Code', 'Anthropic API', 'Elasticsearch', 'Flipside', 'Retool'
+  ];
   const nodePositions = [];
   const nodeMeshes = [];
-  let activeIdx = 0;
+  let activeIdx = 0, skillIdx = 0;
   for (let i = 0; i < NODE_COUNT; i++){
     const phi = Math.acos(1 - 2 * (i + 0.5) / NODE_COUNT);
     const theta = Math.PI * (1 + Math.sqrt(5)) * (i + 0.5);
@@ -1310,7 +1329,13 @@ gsap.utils.toArray('.section-head h2, .section-head .eyebrow, .section-head .met
       })
     );
     node.position.copy(p);
-    node.userData = { idx: i, active, phase: Math.random() * Math.PI * 2, label: active ? ACTIVE_LABELS[activeIdx++] : null };
+    const label = active
+      ? ACTIVE_LABELS[activeIdx++]
+      : (skillIdx < SKILL_LABELS.length ? SKILL_LABELS[skillIdx++] : null);
+    node.userData = {
+      idx: i, active, phase: Math.random() * Math.PI * 2,
+      label, isSkill: !active && !!label
+    };
     root.add(node);
     nodeMeshes.push(node);
   }
@@ -1387,7 +1412,10 @@ gsap.utils.toArray('.section-head h2, .section-head .eyebrow, .section-head .met
     lblContainer.appendChild(el);
     labels.push({ el, refMesh });
   }
-  nodeMeshes.forEach(n => { if (n.userData.label) addLabel(n, n.userData.label, 'node'); });
+  nodeMeshes.forEach(n => {
+    if (!n.userData.label) return;
+    addLabel(n, n.userData.label, n.userData.isSkill ? 'skill' : 'node');
+  });
   satMeshes.forEach(s => addLabel(s, s.userData.label, 'sat'));
 
   // Reused vector to avoid per-frame allocation
