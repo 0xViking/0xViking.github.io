@@ -28,7 +28,9 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+<!-- Trimmed Inter to 400/500/600 only (was 5 weights) — ~40% smaller font payload -->
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-HJ3E2X3W2X"></script>
 <script>
@@ -145,9 +147,14 @@
   .btn .arr{transition:transform .25s var(--easing)}
   .btn:hover .arr{transform:translateX(3px)}
 
-  .hero-right{position:relative;aspect-ratio:1;min-height:420px}
-  .hero-canvas-wrap{position:absolute;inset:0}
+  .hero-right{position:relative;aspect-ratio:1;min-height:460px}
+  /* expand the canvas slightly beyond the right column so the blob+orbit rings have breathing room */
+  .hero-canvas-wrap{position:absolute;inset:-8% -6% -8% -6%}
   .hero-canvas-wrap canvas{width:100%!important;height:100%!important;display:block}
+  @media(max-width:980px){
+    .hero-right{min-height:520px}
+    .hero-canvas-wrap{inset:-4% -2% -4% -2%}
+  }
   .hero-labels{position:absolute;inset:0;pointer-events:none}
   .hero-labels span{position:absolute;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
   .hero-labels .l1{top:8%;left:0}
@@ -769,65 +776,130 @@
       <span class="eyebrow">04 — Stack</span>
       <h3 style="margin-top:18px">Tools I reach for when the deadline is real and the data is <span class="it">larger than it should be.</span></h3>
 
+      <!-- Row 1 · Backend, data, infra, AI -->
       <div class="ticker-row">
         <div class="track">
           <span class="chip"><span class="d"></span>Python</span>
-          <span class="chip"><span class="d"></span>Go</span>
           <span class="chip"><span class="d"></span>FastAPI</span>
           <span class="chip"><span class="d"></span>Kubernetes</span>
           <span class="chip"><span class="d"></span>Docker</span>
+          <span class="chip"><span class="d"></span>Helm</span>
           <span class="chip"><span class="d"></span>Kafka</span>
           <span class="chip"><span class="d"></span>Redis</span>
           <span class="chip"><span class="d"></span>Snowflake</span>
+          <span class="chip"><span class="d"></span>Databricks</span>
+          <span class="chip"><span class="d"></span>Apache Spark</span>
+          <span class="chip"><span class="d"></span>Flipside</span>
           <span class="chip"><span class="d"></span>AWS</span>
+          <span class="chip"><span class="d"></span>Terraform</span>
+          <span class="chip"><span class="d"></span>GitHub Actions</span>
           <span class="chip"><span class="d"></span>Elasticsearch</span>
           <span class="chip"><span class="d"></span>logz.io</span>
-          <span class="chip"><span class="d"></span>Web3.py</span>
+          <span class="chip"><span class="d"></span>Claude Code</span>
+          <span class="chip"><span class="d"></span>Anthropic API</span>
           <!-- duplicate for seamless loop -->
           <span class="chip"><span class="d"></span>Python</span>
-          <span class="chip"><span class="d"></span>Go</span>
           <span class="chip"><span class="d"></span>FastAPI</span>
           <span class="chip"><span class="d"></span>Kubernetes</span>
           <span class="chip"><span class="d"></span>Docker</span>
+          <span class="chip"><span class="d"></span>Helm</span>
           <span class="chip"><span class="d"></span>Kafka</span>
           <span class="chip"><span class="d"></span>Redis</span>
           <span class="chip"><span class="d"></span>Snowflake</span>
+          <span class="chip"><span class="d"></span>Databricks</span>
+          <span class="chip"><span class="d"></span>Apache Spark</span>
+          <span class="chip"><span class="d"></span>Flipside</span>
           <span class="chip"><span class="d"></span>AWS</span>
+          <span class="chip"><span class="d"></span>Terraform</span>
+          <span class="chip"><span class="d"></span>GitHub Actions</span>
           <span class="chip"><span class="d"></span>Elasticsearch</span>
           <span class="chip"><span class="d"></span>logz.io</span>
-          <span class="chip"><span class="d"></span>Web3.py</span>
+          <span class="chip"><span class="d"></span>Claude Code</span>
+          <span class="chip"><span class="d"></span>Anthropic API</span>
         </div>
       </div>
 
+      <!-- Row 2 · Web, blockchain, frontend -->
       <div class="ticker-row reverse">
         <div class="track">
-          <span class="chip"><span class="d"></span>React</span>
           <span class="chip"><span class="d"></span>TypeScript</span>
-          <span class="chip"><span class="d"></span>Tailwind CSS</span>
+          <span class="chip"><span class="d"></span>React</span>
           <span class="chip"><span class="d"></span>Next.js</span>
+          <span class="chip"><span class="d"></span>Tailwind CSS</span>
+          <span class="chip"><span class="d"></span>Web3.py</span>
           <span class="chip"><span class="d"></span>Ethers.js</span>
           <span class="chip"><span class="d"></span>Hardhat</span>
-          <span class="chip"><span class="d"></span>Solana</span>
+          <span class="chip"><span class="d"></span>Solidity</span>
           <span class="chip"><span class="d"></span>Ethereum</span>
+          <span class="chip"><span class="d"></span>Solana</span>
           <span class="chip"><span class="d"></span>Polygon</span>
+          <span class="chip"><span class="d"></span>BSC</span>
+          <span class="chip"><span class="d"></span>CCTP V2</span>
+          <span class="chip"><span class="d"></span>Circle Gateway</span>
+          <span class="chip"><span class="d"></span>USDC compliance</span>
+          <span class="chip"><span class="d"></span>Forta</span>
           <span class="chip"><span class="d"></span>Chainlink</span>
           <span class="chip"><span class="d"></span>IPFS</span>
           <span class="chip"><span class="d"></span>Retool</span>
           <span class="chip"><span class="d"></span>Kibana</span>
+          <span class="chip"><span class="d"></span>Grafana</span>
           <!-- dup -->
-          <span class="chip"><span class="d"></span>React</span>
           <span class="chip"><span class="d"></span>TypeScript</span>
-          <span class="chip"><span class="d"></span>Tailwind CSS</span>
+          <span class="chip"><span class="d"></span>React</span>
           <span class="chip"><span class="d"></span>Next.js</span>
+          <span class="chip"><span class="d"></span>Tailwind CSS</span>
+          <span class="chip"><span class="d"></span>Web3.py</span>
           <span class="chip"><span class="d"></span>Ethers.js</span>
           <span class="chip"><span class="d"></span>Hardhat</span>
-          <span class="chip"><span class="d"></span>Solana</span>
+          <span class="chip"><span class="d"></span>Solidity</span>
           <span class="chip"><span class="d"></span>Ethereum</span>
+          <span class="chip"><span class="d"></span>Solana</span>
           <span class="chip"><span class="d"></span>Polygon</span>
+          <span class="chip"><span class="d"></span>BSC</span>
+          <span class="chip"><span class="d"></span>CCTP V2</span>
+          <span class="chip"><span class="d"></span>Circle Gateway</span>
+          <span class="chip"><span class="d"></span>USDC compliance</span>
+          <span class="chip"><span class="d"></span>Forta</span>
           <span class="chip"><span class="d"></span>Chainlink</span>
           <span class="chip"><span class="d"></span>IPFS</span>
           <span class="chip"><span class="d"></span>Retool</span>
           <span class="chip"><span class="d"></span>Kibana</span>
+          <span class="chip"><span class="d"></span>Grafana</span>
+        </div>
+      </div>
+
+      <!-- Row 3 · Compliance, domain, AI workflow -->
+      <div class="ticker-row">
+        <div class="track">
+          <span class="chip"><span class="d"></span>AML</span>
+          <span class="chip"><span class="d"></span>KYT / KYC</span>
+          <span class="chip"><span class="d"></span>Transaction monitoring</span>
+          <span class="chip"><span class="d"></span>NYDFS-grade</span>
+          <span class="chip"><span class="d"></span>Sanctions screening</span>
+          <span class="chip"><span class="d"></span>Watchlist orchestration</span>
+          <span class="chip"><span class="d"></span>Audit-style analytics</span>
+          <span class="chip"><span class="d"></span>Agentic workflows</span>
+          <span class="chip"><span class="d"></span>Spec-driven dev</span>
+          <span class="chip"><span class="d"></span>Prompt caching</span>
+          <span class="chip"><span class="d"></span>Tool use</span>
+          <span class="chip"><span class="d"></span>RAG</span>
+          <span class="chip"><span class="d"></span>LLM evals</span>
+          <span class="chip"><span class="d"></span>MCP (aware)</span>
+          <!-- dup -->
+          <span class="chip"><span class="d"></span>AML</span>
+          <span class="chip"><span class="d"></span>KYT / KYC</span>
+          <span class="chip"><span class="d"></span>Transaction monitoring</span>
+          <span class="chip"><span class="d"></span>NYDFS-grade</span>
+          <span class="chip"><span class="d"></span>Sanctions screening</span>
+          <span class="chip"><span class="d"></span>Watchlist orchestration</span>
+          <span class="chip"><span class="d"></span>Audit-style analytics</span>
+          <span class="chip"><span class="d"></span>Agentic workflows</span>
+          <span class="chip"><span class="d"></span>Spec-driven dev</span>
+          <span class="chip"><span class="d"></span>Prompt caching</span>
+          <span class="chip"><span class="d"></span>Tool use</span>
+          <span class="chip"><span class="d"></span>RAG</span>
+          <span class="chip"><span class="d"></span>LLM evals</span>
+          <span class="chip"><span class="d"></span>MCP (aware)</span>
         </div>
       </div>
     </div>
@@ -869,13 +941,14 @@
 
 </main>
 
-<!-- Libraries -->
-<script src="https://cdn.jsdelivr.net/npm/three@0.158.0/build/three.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+<!-- Libraries — defer so they download in parallel without blocking first paint -->
+<script defer src="https://cdn.jsdelivr.net/npm/three@0.158.0/build/three.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
 
-<script>
+<!-- Boot site code after the deferred libs are parsed -->
+<script defer>
 /* ---------- Loader ---------- */
 window.addEventListener('load', () => {
   setTimeout(() => document.getElementById('loader').classList.add('hidden'), 900);
@@ -913,21 +986,23 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 const nav = document.getElementById('nav');
 ScrollTrigger.create({ start: 'top -40', end: 99999, toggleClass: { className: 'scrolled', targets: '#nav' } });
 
-/* ---------- Custom cursor ---------- */
+/* ---------- Custom cursor (fine pointer only) ---------- */
 const cur = document.getElementById('cursor');
-let cx=0, cy=0, tx=0, ty=0;
-window.addEventListener('mousemove', e => { tx = e.clientX; ty = e.clientY; });
-function curLoop(){
-  cx += (tx - cx) * 0.18;
-  cy += (ty - cy) * 0.18;
-  if (cur) cur.style.transform = `translate(${cx}px, ${cy}px) translate(-50%,-50%)`;
-  requestAnimationFrame(curLoop);
+const isFinePointer = window.matchMedia('(pointer:fine)').matches;
+if (cur && isFinePointer) {
+  let cx=0, cy=0, tx=0, ty=0;
+  window.addEventListener('mousemove', e => { tx = e.clientX; ty = e.clientY; }, { passive: true });
+  (function curLoop(){
+    cx += (tx - cx) * 0.18;
+    cy += (ty - cy) * 0.18;
+    cur.style.transform = `translate(${cx}px, ${cy}px) translate(-50%,-50%)`;
+    requestAnimationFrame(curLoop);
+  })();
+  document.querySelectorAll('[data-hover], a, button').forEach(el => {
+    el.addEventListener('mouseenter', () => cur.classList.add('hover'));
+    el.addEventListener('mouseleave', () => cur.classList.remove('hover'));
+  });
 }
-curLoop();
-document.querySelectorAll('[data-hover], a, button').forEach(el => {
-  el.addEventListener('mouseenter', () => cur && cur.classList.add('hover'));
-  el.addEventListener('mouseleave', () => cur && cur.classList.remove('hover'));
-});
 
 /* ---------- Manifesto word-by-word reveal ---------- */
 const mf = document.getElementById('manifesto-text');
@@ -1038,17 +1113,19 @@ gsap.utils.toArray('.section-head h2, .section-head .eyebrow, .section-head .met
   const { w, h } = size();
 
   const scene = new THREE.Scene();
-  const camera = new THREE.PerspectiveCamera(45, w/h, 0.1, 100);
-  camera.position.z = 4.2;
+  const camera = new THREE.PerspectiveCamera(40, w/h, 0.1, 100);
+  // pull camera back so the displaced sphere + orbit rings stay fully in frame
+  camera.position.z = 6.0;
 
-  const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
-  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+  const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, powerPreference: 'high-performance' });
+  // cap DPR at 1.75 — visually indistinguishable from 2x on retina, ~25% fewer pixels to shade
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.75));
   renderer.setSize(w, h);
   renderer.setClearColor(0x000000, 0);
   mount.appendChild(renderer.domElement);
 
-  // gradient sphere
-  const geo = new THREE.IcosahedronGeometry(1.55, 64);
+  // gradient sphere — detail 32 (~20k tris) is visually identical to 64 (~80k tris) with smooth shading
+  const geo = new THREE.IcosahedronGeometry(1.55, 32);
 
   const uniforms = {
     uTime:     { value: 0 },
@@ -1178,7 +1255,7 @@ gsap.utils.toArray('.section-head h2, .section-head .eyebrow, .section-head .met
   }
   scene.add(rings);
 
-  // mouse parallax
+  // mouse parallax — dampened so the blob never drifts past the canvas edge
   let mx = 0, my = 0;
   mount.addEventListener('mousemove', e => {
     const b = mount.getBoundingClientRect();
@@ -1196,19 +1273,29 @@ gsap.utils.toArray('.section-head h2, .section-head .eyebrow, .section-head .met
     onUpdate: self => { scrollAmt = self.progress; }
   });
 
+  // pause rendering while hero is off-screen — saves a steady ~3–6% CPU during scroll
+  let inView = true;
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(entries => {
+      inView = entries[0].isIntersecting;
+    }, { rootMargin: '120px 0px 120px 0px' }).observe(mount);
+  }
+
   const clock = new THREE.Clock();
   function animate(){
+    requestAnimationFrame(animate);
+    if (!inView) { clock.getDelta(); return; }
     const dt = clock.getDelta();
     uniforms.uTime.value += dt;
     uniforms.uScroll.value += (scrollAmt - uniforms.uScroll.value) * 0.08;
     mesh.rotation.y += dt * 0.18 + scrollAmt * 0.02;
     mesh.rotation.x += dt * 0.05;
-    mesh.position.x += (mx * 0.4 - mesh.position.x) * 0.06;
-    mesh.position.y += (-my * 0.3 - mesh.position.y) * 0.06;
+    // tighter parallax: 0.2 / 0.15 (was 0.4 / 0.3) keeps the blob inside the canvas at all mouse positions
+    mesh.position.x += (mx * 0.2 - mesh.position.x) * 0.06;
+    mesh.position.y += (-my * 0.15 - mesh.position.y) * 0.06;
     rings.rotation.y += dt * 0.04;
     rings.rotation.x = mesh.rotation.x * 0.4;
     renderer.render(scene, camera);
-    requestAnimationFrame(animate);
   }
   animate();
 
