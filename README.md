@@ -1,42 +1,76 @@
-Hi 👋 My name is Praneeth Reddy Arikatla
-========================================
+# Praneeth Reddy Arikatla
 
-WEB3 developer | Founder & Developer of https://bytehash.tech | buildspace alumn | developer\_dao member | TU Berlin & Polimi
------------------------------------------------------------------------------------------------------------------------------
+**Senior Software Engineer · Blockchain Compliance · DeFi · AI-Augmented Engineering**
 
-* 🌍  I'm based in Berlin, Germany
-* ✉️  You can contact me at [praneeth6226@gmail.com](mailto:praneeth6226@gmail.com )
-* 🧠  I'm learning A lot in WEB3
-* 🤝  I'm open to collaborating on Any project in WEB3
+The source for **[praneethreddy.me](https://praneethreddy.me)** — a single-page portfolio with a Three.js network-constellation hero, scroll-pinned project panels, and a warm, sofi-inspired palette.
 
-<a href="https://www.twitter.com/0xViking" target="_blank" rel="noreferrer"><img
-src="https://img.shields.io/twitter/follow/0xViking?logo=twitter&style=for-the-badge&color=3382ed&labelColor=1c1917"
-/></a><a href="https://www.github.com/0xViking" target="_blank" rel="noreferrer"><img
-src="https://img.shields.io/github/followers/0xViking?logo=github&style=for-the-badge&color=3382ed&labelColor=1c1917" /></a>
+---
 
-### Skills
+### Currently shipping
 
-<p align="left"><a href="https://docs.microsoft.com/en-us/cpp/?view=msvc-170" target="_blank" rel="noreferrer"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-plain.svg" width="36" height="36" alt="C" /></a><a href="https://docs.microsoft.com/en-us/cpp/?view=msvc-170" target="_blank" rel="noreferrer"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-plain.svg" width="36" height="36" alt="C++" /></a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="36" height="36" alt="Javascript" /></a><a href="https://www.oracle.com/java/" target="_blank" rel="noreferrer"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" width="36" height="36" alt="Java" /></a><a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5" target="_blank" rel="noreferrer"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain.svg" width="36" height="36" alt="HTML5" /></a><a href="https://reactjs.org/" target="_blank" rel="noreferrer"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="36" height="36" alt="React" /></a><a href="https://www.w3.org/TR/CSS/#css" target="_blank" rel="noreferrer"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain.svg" width="36" height="36" alt="CSS3" /></a><a href="https://jquery.com/" target="_blank" rel="noreferrer"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-plain.svg" width="36" height="36" alt="JQuery" /></a><a href="https://tailwindcss.com/" target="_blank" rel="noreferrer"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" width="36" height="36" alt="TailwindCSS" /></a><a href="https://nodejs.org/en/" target="_blank" rel="noreferrer"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" width="36" height="36" alt="NodeJS" /></a><a href="https://www.oracle.com/uk/index.html" target="_blank" rel="noreferrer"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg" width="36" height="36" alt="Oracle" /></a><a href="https://www.mysql.com/" target="_blank" rel="noreferrer"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" width="36" height="36" alt="MySQL" /></a><a href="https://www.heroku.com/" target="_blank" rel="noreferrer"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/heroku/heroku-original.svg" width="36" height="36" alt="Heroku" /></a><a href="https://uniswap.org/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/uniswap-colored.svg" width="36" height="36" alt="Uniswap" /></a><a href="https://aave.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/aave-colored.svg" width="36" height="36" alt="AAVE" /></a><a href="https://www.sushi.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/sushiswap-colored.svg" width="36" height="36" alt="Sushiswap" /></a><a href="https://metamask.io/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/metamask-colored.svg" width="36" height="36" alt="MetaMask" /></a><a href="https://chain.link/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/chainlink-colored.svg" width="36" height="36" alt="Chainlink" /></a><a href="https://ethers.io" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/ethers-colored.svg" width="36" height="36" alt="Ethers" /></a><a href="https://web3js.readthedocs.io/en/v1.7.1/#" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/web3js-colored.svg" width="36" height="36" alt="Web3Js" /></a><a href="https://docs.alchemy.com/alchemy/documentation/alchemy-web3" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/alchemy-colored.svg" width="36" height="36" alt="Alchemy" /></a><a href="https://hardhat.org/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/hardhat-colored.svg" width="36" height="36" alt="Hardhat" /></a><a href="https://ipfs.io/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/ipfs-colored.svg" width="36" height="36" alt="IPFS" /></a><a href="https://ethereum.org/en/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/ethereum-colored.svg" width="36" height="36" alt="Ethereum" /></a><a href="https://polygon.technology/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/polygon-colored.svg" width="36" height="36" alt="Polygon" /></a><a href="https://solana.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/solana-colored.svg" width="36" height="36" alt="Solana" /></a></p>
+- **DeFi Solutions Developer · [Solidus Labs](https://www.solidus.io)** *(remote, Jul 2022 — present)*
+  Architected the end-to-end on-chain monitoring system for **Circle (USDC)** across **CCTP, CCTP V2, and Circle Gateway**. Multi-version watchlist orchestration on **Databricks** with Docker-packaged Kubernetes workers. Snowflake pipelines, Solana ingestion, multiple **Flipside Crypto** data shares. Python microservices, Kafka, Redis, Elasticsearch.
 
+- **Founder · [orbitupi.com](https://orbitupi.com)** — a research-grade lens on India's UPI ecosystem.
+- **Founder · [bharatpayindex.com](https://bharatpayindex.com)** — a daily index of India's digital-payments health.
+- **Founder · [bytehashlabs.com](https://bytehashlabs.com)** — chain-agnostic smart-contract testing. web3con hackathon winner — 2nd place + Best dApp on Polygon ($11K total).
 
-### Socials
+### Stack I reach for
 
-<p align="left">
-<a href="https://discord.com/users/0xViking" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/discord.svg" width="32" height="32" /></a>
-<a href="https://www.github.com/0xViking" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/github.svg" width="32" height="32" /></a>
-<a href="https://0xviking" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/hashnode.svg" width="32" height="32" /></a>
-<a href="https://www.linkedin.com/in/praneethreddyarikatla" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/linkedin.svg" width="32" height="32" /></a>
-<a href="https://www.twitter.com/0xViking" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/twitter.svg" width="32" height="32" /></a>
-</p>
+`Python` · `TypeScript` · `React` · `Next.js` · `FastAPI` · `Kubernetes` · `Docker` · `Kafka` · `Snowflake` · `Databricks` · `AWS` · `Web3.py` · `Ethers.js` · `Solidity` · `Tailwind` · `Claude Code` · `Anthropic API` · `Elasticsearch` · `Flipside` · `Retool`
 
-### Badges
+Daily power-user of AI-augmented engineering — Claude Code, Anthropic API, agentic coding workflows, spec-driven development. Consistently delivering **3×–5× productivity gains** on feature work, refactors, and incident response.
 
-<b>My GitHub Stats</b>
+### Where I've been
 
-<a href="http://www.github.com/0xViking"><img src="https://github-readme-stats.vercel.app/api?username=0xViking&show_icons=true&hide=&count_private=true&title_color=3382ed&text_color=ffffff&icon_color=3382ed&bg_color=1c1917&hide_border=true&show_icons=true" alt="0xViking's GitHub stats" /></a>
+- TU Berlin · Alliance4Tech Exchange Program (CSE)
+- Politecnico di Milano · MSc Computer Science & Engineering
+- Andhra University · B.Tech Computer Science & Engineering
+- ISB Hyderabad · Technology Entrepreneurship Program
+- Plutus Pioneer, 2nd cohort · Cardano Foundation
+- 15+ casino slot games shipped at Ivy Software, Hyderabad (2017 — 2020)
 
-<a href="http://www.github.com/0xViking"><img src="https://github-readme-streak-stats.herokuapp.com/?user=0xViking&stroke=ffffff&background=1c1917&ring=3382ed&fire=3382ed&currStreakNum=ffffff&currStreakLabel=3382ed&sideNums=ffffff&sideLabels=ffffff&dates=ffffff&hide_border=true" /></a>
+---
 
-<a href="http://www.github.com/0xViking"><img src="https://activity-graph.herokuapp.com/graph?username=0xViking&bg_color=1c1917&color=ffffff&line=3382ed&point=ffffff&area_color=1c1917&area=true&hide_border=true&custom_title=GitHub%20Commits%20Graph" alt="GitHub Commits Graph" /></a>
+### Get in touch
 
-<a href="https://github.com/0xViking" align="left"><img src="https://github-readme-stats.vercel.app/api/top-langs/?username=0xViking&langs_count=10&title_color=3382ed&text_color=ffffff&icon_color=3382ed&bg_color=1c1917&hide_border=true&locale=en&custom_title=Top%20%Languages" alt="Top Languages" /></a>
+- 📍 Hyderabad, India · UTC+5:30
+- ✉️ [praneeth6226@gmail.com](mailto:praneeth6226@gmail.com)
+- 🌐 [praneethreddy.me](https://praneethreddy.me) · [blog.praneethreddy.me](https://blog.praneethreddy.me)
+- 🐦 [twitter.com/0xViking](https://twitter.com/0xViking)
+- 💼 [linkedin.com/in/praneethreddyarikatla](https://linkedin.com/in/praneethreddyarikatla)
+
+> Currently shipping. Open to the right conversation — senior, staff, or founding-engineer roles.
+
+---
+
+### About this repo
+
+A single-file site (`index.html`) with inline CSS and JS, served as static via GitHub Pages.
+
+**Run locally**
+
+```bash
+git clone https://github.com/0xViking/0xViking.github.io.git
+cd 0xViking.github.io
+python3 -m http.server 8000
+# open http://localhost:8000
+```
+
+**Built with**
+
+- Pure HTML / CSS / JS — no build step
+- [Three.js](https://threejs.org) — the constellation hero scene (wireframe icosphere + Fibonacci-distributed nodes labelled with chains and skills + bridge arcs + satellite orbits for the founder products)
+- [GSAP ScrollTrigger](https://gsap.com/docs/v3/Plugins/ScrollTrigger) — scroll-pinned project panels, manifesto word reveal, timeline fade-ins
+- [Lenis](https://lenis.studiofreight.com) — smooth scrolling
+- Google Fonts — Instrument Serif (display), Inter (body), JetBrains Mono (labels)
+- GitHub Pages with a custom domain via `CNAME`
+
+---
+
+<a href="https://github.com/0xViking">
+  <img src="https://github-readme-stats.vercel.app/api?username=0xViking&show_icons=true&count_private=true&title_color=e26a4a&text_color=2b2620&icon_color=e26a4a&bg_color=f3ecdd&border_color=d8cdb5&hide_border=false" alt="GitHub stats" />
+</a>
+<a href="https://github.com/0xViking">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=0xViking&layout=compact&title_color=e26a4a&text_color=2b2620&bg_color=f3ecdd&border_color=d8cdb5" alt="Top languages" />
+</a>
