@@ -147,13 +147,14 @@
   .btn .arr{transition:transform .25s var(--easing)}
   .btn:hover .arr{transform:translateX(3px)}
 
-  .hero-right{position:relative;aspect-ratio:1;min-height:460px}
-  /* canvas extends well beyond the column so the outer orbit rings never clip */
-  .hero-canvas-wrap{position:absolute;inset:-14% -12% -14% -12%}
+  .hero-right{position:relative;aspect-ratio:1;min-height:420px}
+  .hero-canvas-wrap{position:absolute;inset:-4% -4% -4% -4%}
   .hero-canvas-wrap canvas{width:100%!important;height:100%!important;display:block}
   @media(max-width:980px){
-    .hero-right{min-height:540px}
-    .hero-canvas-wrap{inset:-8% -6% -8% -6%}
+    .hero-right{min-height:340px;max-width:520px;margin:0 auto;width:100%}
+  }
+  @media(max-width:640px){
+    .hero-right{min-height:300px}
   }
   .hero-labels{position:absolute;inset:0;pointer-events:none}
   .hero-labels span{position:absolute;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
@@ -308,6 +309,87 @@
   @media (prefers-reduced-motion: reduce){
     *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
     .marquee-track,.ticker-row .track{animation:none}
+  }
+
+  /* ============================================================
+     RESPONSIVE — comprehensive small-screen pass
+     ============================================================ */
+  @media(max-width:980px){
+    section{padding:80px 0}
+    .section-head{margin-bottom:40px;gap:20px}
+    .section-head .meta-col{text-align:left;max-width:none}
+    .hero{padding:120px 0 40px}
+    .hero-left h1{font-size:clamp(48px,11vw,84px)}
+    .hero-left .lede{font-size:16px}
+    .hero-left .meta{gap:20px;flex-wrap:wrap}
+    .hero-left .meta .v{font-size:22px}
+    .hero-grid{gap:32px}
+    .marquee span{font-size:32px}
+    .marquee-track{gap:36px}
+    .manifesto-content{font-size:clamp(22px,4.6vw,42px);line-height:1.18}
+    .tl-item .body h3{font-size:26px}
+    .tl-item .body p{font-size:14px}
+    .project-info h3{font-size:clamp(36px,8vw,60px)}
+    .project-info .desc{font-size:16px}
+    .project-visual{aspect-ratio:5/4;max-width:520px;margin:0 auto;width:100%}
+    .project-visual .glyph{font-size:clamp(90px,22vw,180px)}
+    .project-visual .floating{font-size:9px;padding:8px 12px}
+    .stack-section h3{font-size:clamp(24px,5vw,38px);margin-bottom:32px}
+    .ticker-row .chip{font-size:12px;padding:10px 16px}
+    .cta-card h2{font-size:clamp(40px,9vw,68px)}
+    .cta-card .sub{font-size:15px}
+    .cta-card .links a{font-size:13px;padding:14px 18px}
+    .scroll-hint{display:none}
+    .hero-labels span{display:none}  /* labels often overlap canvas on mobile */
+  }
+
+  @media(max-width:640px){
+    .wrap{padding:0 18px}
+    nav.top{padding:12px 16px}
+    nav.top .brand .mark{width:30px;height:30px}
+    nav.top .brand .nameplate .n1{font-size:17px}
+    nav.top .nav-actions{gap:6px}
+    nav.top .cta{padding:8px 12px;font-size:11.5px}
+    .hero{padding:100px 0 30px}
+    .hero-left .pill{font-size:11px;padding:6px 12px 6px 8px}
+    .hero-left h1{font-size:clamp(42px,12vw,64px)}
+    .hero-left .ctas{gap:10px}
+    .hero-left .ctas .btn{padding:13px 18px;font-size:13px}
+    .marquee{padding:24px 0}
+    .marquee span{font-size:24px}
+    .marquee span .star{margin-left:36px}
+    .section-head h2{font-size:clamp(32px,8.5vw,56px)}
+    .stats{grid-template-columns:repeat(2,1fr);gap:18px;padding-top:32px;margin-top:48px}
+    .stat .v{font-size:42px}
+    .stat .l{font-size:12px}
+    .tl-item{padding:24px 0}
+    .tl-item .body h3{font-size:22px;line-height:1.15}
+    .project{padding:64px 0;gap:24px}
+    .project-info h3{font-size:clamp(32px,9vw,48px)}
+    .project-info .num{font-size:11px}
+    .project-info .features li{font-size:13px}
+    .project-info .visit{font-size:13px}
+    .project-visual .corner{font-size:22px}
+    .project-visual .floating{display:none}     /* avoid overlap on phones; numbering + corner are enough */
+    .project-visual .corner-top{font-size:9px}
+    .ticker-row{gap:24px}
+    .ticker-row .chip{font-size:11px;padding:8px 13px;gap:8px}
+    .ticker-row .chip .d{width:5px;height:5px}
+    .cta-card{padding:40px 24px}
+    .cta-card h2{font-size:clamp(34px,10vw,52px)}
+    .cta-card .info-grid{gap:18px;margin-top:48px;padding-top:24px}
+    .cta-card .info-grid .it-v{font-size:18px}
+    footer{padding:32px 0;flex-direction:column;align-items:flex-start;gap:10px}
+  }
+
+  @media(max-width:420px){
+    .hero-left h1{font-size:clamp(38px,12.5vw,52px)}
+    .hero-left .ctas{flex-direction:column;align-items:stretch}
+    .hero-left .ctas .btn{justify-content:center}
+    .stats{grid-template-columns:1fr 1fr;gap:14px}
+    .stat .v{font-size:38px}
+    .hero-left .meta{gap:14px}
+    .marquee span{font-size:20px}
   }
 </style>
 </head>
@@ -1110,8 +1192,14 @@ gsap.utils.toArray('.section-head h2, .section-head .eyebrow, .section-head .met
   });
 });
 
-/* ---------- THREE.js hero blob ---------- */
-(function heroBlob(){
+/* ---------- THREE.js hero · network constellation ----------
+   A wireframe icosphere ("the network") with floating node dots,
+   connecting arcs ("on-chain transactions / cross-chain bridges"),
+   and a few satellite orbits ("monitoring / OrbitUPI"). Far more
+   on-theme than an abstract blob — and bounded by a tight radius
+   so it can never crop at any canvas size.
+------------------------------------------------------------- */
+(function heroConstellation(){
   const mount = document.getElementById('hero-canvas-wrap');
   if (!mount || !window.THREE) return;
 
@@ -1119,158 +1207,131 @@ gsap.utils.toArray('.section-head h2, .section-head .eyebrow, .section-head .met
   const { w, h } = size();
 
   const scene = new THREE.Scene();
-  const camera = new THREE.PerspectiveCamera(40, w/h, 0.1, 100);
-  // pull camera back so the displaced sphere + orbit rings stay fully in frame
-  // at z=6.8, FOV=40°, half-width ≈ 2.47 — comfortably > outermost ring radius (2.14)
-  camera.position.z = 6.8;
+  // FOV 32°, z = 6.2 → visible half-width = 6.2 × tan(16°) ≈ 1.78
+  // All scene radii are ≤ 1.55, leaving 0.23 of safety margin on every edge.
+  const camera = new THREE.PerspectiveCamera(32, w/h, 0.1, 100);
+  camera.position.z = 6.2;
 
   const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, powerPreference: 'high-performance' });
-  // cap DPR at 1.75 — visually indistinguishable from 2x on retina, ~25% fewer pixels to shade
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.75));
   renderer.setSize(w, h);
   renderer.setClearColor(0x000000, 0);
   mount.appendChild(renderer.domElement);
 
-  // gradient sphere — detail 32 (~20k tris) is visually identical to 64 (~80k tris) with smooth shading
-  const geo = new THREE.IcosahedronGeometry(1.55, 32);
+  /* -- Palette -- */
+  const C_INK    = new THREE.Color('#161310');
+  const C_CORAL  = new THREE.Color('#e26a4a');
+  const C_CREAM  = new THREE.Color('#f3ecdd');
+  const C_SAGE   = new THREE.Color('#6a7a55');
 
-  const uniforms = {
-    uTime:     { value: 0 },
-    uScroll:   { value: 0 },
-    uMouseX:   { value: 0 },
-    uMouseY:   { value: 0 },
-    uColorA:   { value: new THREE.Color('#e26a4a') },  // coral
-    uColorB:   { value: new THREE.Color('#c89a4a') },  // gold
-    uColorC:   { value: new THREE.Color('#f1ead8') },  // cream highlight
-    uColorD:   { value: new THREE.Color('#6a7a55') }   // sage shadow
-  };
+  /* -- A root group so we rotate everything in unison -- */
+  const root = new THREE.Group();
+  scene.add(root);
 
-  const material = new THREE.ShaderMaterial({
-    uniforms,
-    vertexShader: `
-      uniform float uTime;
-      uniform float uScroll;
-      uniform float uMouseX;
-      uniform float uMouseY;
-      varying vec3 vNormal;
-      varying vec3 vPos;
-      varying float vDist;
+  /* -- Inner cream sphere: gives the wireframe depth -- */
+  const innerSphere = new THREE.Mesh(
+    new THREE.SphereGeometry(1.18, 48, 48),
+    new THREE.MeshBasicMaterial({ color: 0xf6efde, transparent: true, opacity: 0.72 })
+  );
+  root.add(innerSphere);
 
-      // simplex noise (Stefan Gustavson, public domain)
-      vec3 mod289(vec3 x){return x-floor(x*(1.0/289.0))*289.0;}
-      vec4 mod289(vec4 x){return x-floor(x*(1.0/289.0))*289.0;}
-      vec4 permute(vec4 x){return mod289(((x*34.0)+1.0)*x);}
-      vec4 taylorInvSqrt(vec4 r){return 1.79284291400159-0.85373472095314*r;}
-      float snoise(vec3 v){
-        const vec2 C=vec2(1.0/6.0,1.0/3.0);
-        const vec4 D=vec4(0.0,0.5,1.0,2.0);
-        vec3 i=floor(v+dot(v,C.yyy));
-        vec3 x0=v-i+dot(i,C.xxx);
-        vec3 g=step(x0.yzx,x0.xyz);
-        vec3 l=1.0-g;
-        vec3 i1=min(g.xyz,l.zxy);
-        vec3 i2=max(g.xyz,l.zxy);
-        vec3 x1=x0-i1+C.xxx;
-        vec3 x2=x0-i2+C.yyy;
-        vec3 x3=x0-D.yyy;
-        i=mod289(i);
-        vec4 p=permute(permute(permute(
-          i.z+vec4(0.0,i1.z,i2.z,1.0))
-          +i.y+vec4(0.0,i1.y,i2.y,1.0))
-          +i.x+vec4(0.0,i1.x,i2.x,1.0));
-        float n_=0.142857142857;
-        vec3 ns=n_*D.wyz-D.xzx;
-        vec4 j=p-49.0*floor(p*ns.z*ns.z);
-        vec4 x_=floor(j*ns.z);
-        vec4 y_=floor(j-7.0*x_);
-        vec4 x=x_*ns.x+ns.yyyy;
-        vec4 y=y_*ns.x+ns.yyyy;
-        vec4 h=1.0-abs(x)-abs(y);
-        vec4 b0=vec4(x.xy,y.xy);
-        vec4 b1=vec4(x.zw,y.zw);
-        vec4 s0=floor(b0)*2.0+1.0;
-        vec4 s1=floor(b1)*2.0+1.0;
-        vec4 sh=-step(h,vec4(0.0));
-        vec4 a0=b0.xzyw+s0.xzyw*sh.xxyy;
-        vec4 a1=b1.xzyw+s1.xzyw*sh.zzww;
-        vec3 p0=vec3(a0.xy,h.x);
-        vec3 p1=vec3(a0.zw,h.y);
-        vec3 p2=vec3(a1.xy,h.z);
-        vec3 p3=vec3(a1.zw,h.w);
-        vec4 norm=taylorInvSqrt(vec4(dot(p0,p0),dot(p1,p1),dot(p2,p2),dot(p3,p3)));
-        p0*=norm.x;p1*=norm.y;p2*=norm.z;p3*=norm.w;
-        vec4 m=max(0.6-vec4(dot(x0,x0),dot(x1,x1),dot(x2,x2),dot(x3,x3)),0.0);
-        m=m*m;
-        return 42.0*dot(m*m,vec4(dot(p0,x0),dot(p1,x1),dot(p2,x2),dot(p3,x3)));
-      }
+  /* -- Wireframe icosphere · "the network surface" -- */
+  const sphereGeo = new THREE.IcosahedronGeometry(1.25, 2); // 320 tris, ~480 edges
+  const edges = new THREE.EdgesGeometry(sphereGeo);
+  const sphereLines = new THREE.LineSegments(
+    edges,
+    new THREE.LineBasicMaterial({ color: C_INK, transparent: true, opacity: 0.16 })
+  );
+  root.add(sphereLines);
 
-      void main(){
-        vec3 pos = position;
-        float t = uTime * 0.35;
-        float scrollAmp = 0.5 + uScroll * 0.6;
-        float n = snoise(pos * 1.2 + vec3(t, t*0.7, -t*0.5));
-        float n2 = snoise(pos * 2.6 + vec3(-t*0.5, t*0.3, t));
-        float disp = n * 0.32 * scrollAmp + n2 * 0.08;
-        pos += normal * disp;
-        vNormal = normalize(normalMatrix * normal);
-        vPos = pos;
-        vDist = disp;
-        gl_Position = projectionMatrix * modelViewMatrix * vec4(pos, 1.0);
-      }
-    `,
-    fragmentShader: `
-      uniform vec3 uColorA;
-      uniform vec3 uColorB;
-      uniform vec3 uColorC;
-      uniform vec3 uColorD;
-      uniform float uTime;
-      varying vec3 vNormal;
-      varying vec3 vPos;
-      varying float vDist;
-      void main(){
-        // simple lambert-ish lighting
-        vec3 light = normalize(vec3(0.4, 0.8, 0.6));
-        float diff = max(dot(vNormal, light), 0.0);
-        float rim = pow(1.0 - max(dot(vNormal, vec3(0.0,0.0,1.0)), 0.0), 2.5);
-
-        // gradient based on position + displacement
-        float mixA = smoothstep(-0.6, 0.6, vPos.y);
-        vec3 base = mix(uColorD, uColorA, mixA);
-        base = mix(base, uColorB, smoothstep(-1.0, 1.0, vPos.x));
-        base += rim * uColorC * 0.7;
-        base += diff * 0.25;
-        // a touch of displacement-driven highlight
-        base += vec3(1.0, 0.6, 0.4) * max(vDist, 0.0) * 0.45;
-        gl_FragColor = vec4(base, 1.0);
-      }
-    `
-  });
-
-  const mesh = new THREE.Mesh(geo, material);
-  scene.add(mesh);
-
-  // floating rings — radii 1.9 / 2.02 / 2.14, all safely inside the z=6.8 / FOV=40 viewport
-  const rings = new THREE.Group();
-  for (let i = 0; i < 3; i++){
-    const r = new THREE.Mesh(
-      new THREE.TorusGeometry(1.9 + i*0.12, 0.005, 12, 200),
-      new THREE.MeshBasicMaterial({ color: 0x161310, transparent: true, opacity: 0.25 - i*0.06 })
+  /* -- Floating node points distributed by Fibonacci spiral -- */
+  const NODE_COUNT = 26;
+  const nodePositions = [];
+  const nodeMeshes = [];
+  for (let i = 0; i < NODE_COUNT; i++){
+    const phi = Math.acos(1 - 2 * (i + 0.5) / NODE_COUNT);
+    const theta = Math.PI * (1 + Math.sqrt(5)) * (i + 0.5);
+    const r = 1.4 + (Math.random() - 0.5) * 0.05;
+    const p = new THREE.Vector3(
+      r * Math.sin(phi) * Math.cos(theta),
+      r * Math.sin(phi) * Math.sin(theta),
+      r * Math.cos(phi)
     );
-    r.rotation.x = Math.PI/2 + (i*0.18);
-    r.rotation.z = i*0.4;
-    rings.add(r);
-  }
-  scene.add(rings);
+    nodePositions.push(p);
 
-  // mouse parallax — dampened so the blob never drifts past the canvas edge
+    // every ~6th node is an "active" coral node (pulses)
+    const active = i % 6 === 0;
+    const node = new THREE.Mesh(
+      new THREE.SphereGeometry(active ? 0.045 : 0.022, 12, 12),
+      new THREE.MeshBasicMaterial({
+        color: active ? C_CORAL : C_INK,
+        transparent: !active,
+        opacity: active ? 1 : 0.55
+      })
+    );
+    node.position.copy(p);
+    node.userData = { idx: i, active, phase: Math.random() * Math.PI * 2 };
+    root.add(node);
+    nodeMeshes.push(node);
+  }
+
+  /* -- Connection arcs · curve outward like cross-chain bridges -- */
+  const ARC_COUNT = 11;
+  const arcs = [];
+  for (let i = 0; i < ARC_COUNT; i++){
+    const a = nodePositions[Math.floor(Math.random() * nodePositions.length)];
+    let b = nodePositions[Math.floor(Math.random() * nodePositions.length)];
+    if (a === b) b = nodePositions[(nodePositions.indexOf(a) + 7) % nodePositions.length];
+    const mid = a.clone().add(b).multiplyScalar(0.5);
+    if (mid.lengthSq() < 0.01) mid.copy(a).normalize();
+    mid.normalize().multiplyScalar(1.52 + Math.random() * 0.03); // bulge outward, still inside safety radius
+    const curve = new THREE.QuadraticBezierCurve3(a, mid, b);
+    const points = curve.getPoints(48);
+    const geom = new THREE.BufferGeometry().setFromPoints(points);
+    const line = new THREE.Line(
+      geom,
+      new THREE.LineBasicMaterial({
+        color: i % 3 === 0 ? C_CORAL : C_INK,
+        transparent: true,
+        opacity: i % 3 === 0 ? 0.45 : 0.22
+      })
+    );
+    line.userData = { phase: Math.random() * Math.PI * 2 };
+    root.add(line);
+    arcs.push(line);
+  }
+
+  /* -- Satellite orbits · 3 thin rings at varied inclinations -- */
+  const orbits = new THREE.Group();
+  const ORBIT_RADII = [1.45, 1.5, 1.55]; // all inside safety margin
+  ORBIT_RADII.forEach((rad, i) => {
+    const ring = new THREE.Mesh(
+      new THREE.TorusGeometry(rad, 0.004, 8, 200),
+      new THREE.MeshBasicMaterial({ color: C_INK, transparent: true, opacity: 0.18 - i * 0.04 })
+    );
+    ring.rotation.x = Math.PI / 2 + i * 0.35;
+    ring.rotation.z = i * 0.45;
+    orbits.add(ring);
+
+    // little satellite chip riding the orbit
+    const sat = new THREE.Mesh(
+      new THREE.SphereGeometry(0.035, 12, 12),
+      new THREE.MeshBasicMaterial({ color: i === 1 ? C_CORAL : C_SAGE })
+    );
+    sat.userData = { rad, angle: Math.random() * Math.PI * 2, speed: 0.35 + i * 0.15, parent: ring };
+    orbits.add(sat);
+  });
+  root.add(orbits);
+
+  /* -- Mouse parallax (very subtle, on camera not mesh) -- */
   let mx = 0, my = 0;
   mount.addEventListener('mousemove', e => {
     const b = mount.getBoundingClientRect();
     mx = ((e.clientX - b.left) / b.width - 0.5);
     my = ((e.clientY - b.top) / b.height - 0.5);
-  });
+  }, { passive: true });
 
-  // scroll input
+  /* -- Scroll-driven rotation boost -- */
   let scrollAmt = 0;
   ScrollTrigger.create({
     trigger: '.hero',
@@ -1280,7 +1341,7 @@ gsap.utils.toArray('.section-head h2, .section-head .eyebrow, .section-head .met
     onUpdate: self => { scrollAmt = self.progress; }
   });
 
-  // pause rendering while hero is off-screen — saves a steady ~3–6% CPU during scroll
+  /* -- Pause when off-screen -- */
   let inView = true;
   if ('IntersectionObserver' in window) {
     new IntersectionObserver(entries => {
@@ -1288,20 +1349,58 @@ gsap.utils.toArray('.section-head h2, .section-head .eyebrow, .section-head .met
     }, { rootMargin: '120px 0px 120px 0px' }).observe(mount);
   }
 
+  /* -- Animation loop -- */
   const clock = new THREE.Clock();
+  let t = 0;
   function animate(){
     requestAnimationFrame(animate);
     if (!inView) { clock.getDelta(); return; }
     const dt = clock.getDelta();
-    uniforms.uTime.value += dt;
-    uniforms.uScroll.value += (scrollAmt - uniforms.uScroll.value) * 0.08;
-    mesh.rotation.y += dt * 0.18 + scrollAmt * 0.02;
-    mesh.rotation.x += dt * 0.05;
-    // tighter parallax: 0.12 / 0.1 keeps the blob safely inside the canvas at every mouse position
-    mesh.position.x += (mx * 0.12 - mesh.position.x) * 0.06;
-    mesh.position.y += (-my * 0.1 - mesh.position.y) * 0.06;
-    rings.rotation.y += dt * 0.04;
-    rings.rotation.x = mesh.rotation.x * 0.4;
+    t += dt;
+
+    // Whole-scene slow rotation, accelerated slightly by scroll
+    root.rotation.y += dt * 0.15 + scrollAmt * 0.04;
+    root.rotation.x = Math.sin(t * 0.25) * 0.12;
+
+    // Pulse active nodes
+    for (let i = 0; i < nodeMeshes.length; i++){
+      const n = nodeMeshes[i];
+      if (n.userData.active){
+        const s = 1 + Math.sin(t * 1.8 + n.userData.phase) * 0.35;
+        n.scale.setScalar(s);
+      }
+    }
+
+    // Subtly fade arc opacity for a "data-flowing" feel
+    for (let i = 0; i < arcs.length; i++){
+      const a = arcs[i];
+      const k = 0.5 + 0.5 * Math.sin(t * 0.9 + a.userData.phase);
+      a.material.opacity = 0.12 + k * (i % 3 === 0 ? 0.35 : 0.18);
+    }
+
+    // Orbits spin independently
+    orbits.rotation.y += dt * 0.18;
+
+    // Move satellites around their rings
+    orbits.children.forEach(child => {
+      if (child.userData && child.userData.rad){
+        child.userData.angle += dt * child.userData.speed;
+        const r = child.userData.rad;
+        // place on ring before parent rotation is applied
+        child.position.set(
+          Math.cos(child.userData.angle) * r,
+          0,
+          Math.sin(child.userData.angle) * r
+        );
+        child.position.applyEuler(child.userData.parent.rotation);
+      }
+    });
+
+    // Gentle camera parallax (tight: 0.18 of a viewport unit max)
+    camera.position.x += (mx * 0.18 - camera.position.x) * 0.05;
+    camera.position.y += (-my * 0.14 - camera.position.y) * 0.05;
+    camera.lookAt(0, 0, 0);
+
     renderer.render(scene, camera);
   }
   animate();
