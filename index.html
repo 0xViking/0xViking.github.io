@@ -202,18 +202,25 @@
   }
   .hero-lbl-sat::before{background:var(--cream);opacity:.5}
   .hero-lbl-center::before{display:none}
-  /* phones: keep the 4 chain + 3 satellite labels visible; only the
-     dense 20-skill layer is hidden, since it would crowd the small canvas */
+  /* phones: all three label layers visible, sized very compactly so
+     ~27 chips fit around a 320px-wide canvas. Back-of-sphere fade
+     means only the front-facing ~half (≈13 labels) are visible at
+     any rotation, which is the actual on-screen density. */
   @media(max-width:640px){
-    .hero-lbl-skill{display:none}
-    .hero-lbl{font-size:8px;padding:2.5px 6px;letter-spacing:.06em;border-radius:999px}
-    .hero-lbl-sat{font-size:8.5px;padding:3px 7px}
+    .hero-lbl{font-size:8px;padding:2px 5px;letter-spacing:.05em;border-radius:999px}
+    .hero-lbl-sat{font-size:8.5px;padding:2.5px 7px}
+    .hero-lbl-skill{
+      font-size:6.5px;padding:1px 4px;letter-spacing:.03em;
+      background:rgba(243,236,221,.55);border-color:rgba(216,205,181,.45);
+      color:var(--muted);
+    }
     .hero-lbl::before{display:none}  /* tick mark feels noisy on a tiny canvas */
     .hero-lbl-center{font-size:11px;padding:3px 8px}
   }
-  /* on tablets/laptops up to ~1100px, drop only the densest skill layer */
+  /* tablets / small laptops: render skill labels smaller so they don't
+     crowd alongside the chain + product labels */
   @media(max-width:1100px) and (min-width:641px){
-    .hero-lbl-skill{display:none}
+    .hero-lbl-skill{font-size:7.5px;padding:2px 6px}
   }
   .hero-labels{position:absolute;inset:0;pointer-events:none}
   .hero-labels span{position:absolute;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
